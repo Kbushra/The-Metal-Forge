@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"The Metal Forge",
-    "path":"The Metal Forge.yyp",
+    "name":"Tiles",
+    "path":"folders/Tiles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

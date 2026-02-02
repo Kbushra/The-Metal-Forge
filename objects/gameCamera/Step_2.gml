@@ -1,3 +1,15 @@
+if got_signal("snap")
+{
+	var camW = camera_get_view_width(view_camera[0]);
+	var camH = camera_get_view_height(view_camera[0]);
+	x = clamp(objPlayer.x - camW/2, 0, room_width - camW);
+	y = clamp(objPlayer.y - camH/2, 0, room_height - camH);
+	xstart = x;
+	ystart = y;
+	
+	stop_signal("snap");
+}
+
 var camW = camera_get_view_width(view_camera[0]);
 var camH = camera_get_view_height(view_camera[0]);
 targetX = clamp(objPlayer.x + offset * objPlayer.hsp - camW/2, 0, room_width - camW);
@@ -7,14 +19,12 @@ if objPlayer.prevHsp != objPlayer.hsp
 {
 	xstart = x;
 	progressX = 0;
-	print("a");
 }
 
 if objPlayer.prevVsp != objPlayer.vsp
 {
 	ystart = y;
 	progressY = 0;
-	print("b");
 }
 
 if targetX > x { x = floor(exponential_out(xstart, targetX, progressX, 3)); }

@@ -1,0 +1,1 @@
+objPlayer.showColl = !objPlayer.showColl;

@@ -6,8 +6,8 @@
   "name":"trigSolid",
   "overriddenProperties":[],
   "parent":{
-    "name":"The Metal Forge",
-    "path":"The Metal Forge.yyp",
+    "name":"Triggers",
+    "path":"folders/Triggers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

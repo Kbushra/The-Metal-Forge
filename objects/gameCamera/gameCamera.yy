@@ -13,11 +13,8 @@
     "name":"Managers",
     "path":"folders/Managers.yy",
   },
-  "parentObjectId":{
-    "name":"parentGame",
-    "path":"objects/parentGame/parentGame.yy",
-  },
-  "persistent":false,
+  "parentObjectId":null,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,

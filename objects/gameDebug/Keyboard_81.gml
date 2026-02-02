@@ -1,0 +1,2 @@
+objBarHealth.hp--;
+objBarBuilding.hp--;

@@ -23,7 +23,7 @@
   ],
   "name":"sprPlayerColl",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Player",
     "path":"folders/Player.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":13,
-    "yorigin":20,
+    "yorigin":15,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
