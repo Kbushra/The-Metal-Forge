@@ -1,0 +1,27 @@
+if origin != noone && place_meeting(x, y, origin) { depth = origin.depth + 1; }
+else { depth = -999; }
+
+image_angle += 20;
+
+if electrocuteTimer > 0
+{
+	send_signal(objPlayer, "puppet", true);
+	objPlayer.sprite_index = sprPlayerElectrocute;
+	objPlayer.image_speed = 1;
+	electrocuteTimer--;
+	
+	if instance_exists(objBarHealth) { objBarHealth.hp -= dmg; }
+	
+	image_xscale += 0.05;
+	image_yscale += 0.05;
+	image_alpha -= 0.05;
+	gameCamera.shake = image_alpha > 0 && electrocuteTimer > 0;
+	
+	if electrocuteTimer <= 0 { instance_destroy(); }
+	exit;
+}
+
+x += xSpd;
+
+ySpd += 0.1;
+y += ySpd;

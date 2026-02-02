@@ -12,7 +12,7 @@
 enum playerStates
 {
 	normal,
-	freeze
+	puppet
 }
 
 enum carrierValue
@@ -29,6 +29,7 @@ enum carrierTarget
 
 enum pathfinderStates
 {
+	puppet,
 	wander,
 	pathfind
 }

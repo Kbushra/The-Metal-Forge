@@ -7,7 +7,6 @@ if state == pathfinderStates.wander
 	wanderDelay--;
 	if wanderDelay > 0
 	{
-		sprite_index = asset_get_index($"spr{name}{correct_horizontal_dir(dir)}");
 		image_index = 0;
 		image_speed = 0;
 		exit;
@@ -19,15 +18,16 @@ if state == pathfinderStates.wander
 		wanderY = 0;
 		setup_wander();
 		image_index = 1;
+		xstart = x;
+		ystart = y;
 	}
 	
-	x += wanderX * spd;
-	y += wanderY * spd;
+	x = lerp(x, xstart + wanderX * spd * 32, 0.1);
+	y = lerp(y, ystart + wanderY * spd * 32, 0.1);
 	wanderDist -= spd;
 	if wanderDist > 0
 	{
-		sprite_index = asset_get_index($"spr{name}{correct_horizontal_dir(dir)}");
-		image_speed = 1;
+		image_speed = image_index >= 1;
 		exit;
 	}
 	
@@ -39,8 +39,6 @@ if state == pathfinderStates.wander
 }
 
 if state != pathfinderStates.pathfind { exit; }
-
-image_speed = 1;
 
 wanderDist = RAND_WANDER;
 wanderDelay = RAND_WANDER;
@@ -57,13 +55,14 @@ if !array_equals(moving, [false, false]) //Go to tile
 	//Can't pathfind with nowhere to go
 	if array_length(next) == 0 { moving = [false, false]; state = pathfinderStates.wander; exit; }
 	
-	axis = get_axis_from_spd(next[0] - x, next[1] - y);
-	dir = get_dir(next[0] - x, next[1] - y, axis);
-	sprite_index = asset_get_index($"spr{name}{correct_horizontal_dir(dir)}");
-	
-	moving = move_towards_point_overworld(next[0], next[1], spd, moving);
+	x = lerp(x, next[0], 0.1);
+	y = lerp(y, next[1], 0.1);
+	moving = [!near_equals(x, next[0], 2), !near_equals(y, next[1], 2)];
+	image_speed = image_index >= 1;
 	exit;
 }
+
+image_index = 1;
 
 var node = gamePathfinder.nodes[tileX][tileY];
 

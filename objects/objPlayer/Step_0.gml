@@ -1,5 +1,12 @@
 depth = -bbox_bottom;
 
+if got_signal("puppet")
+{
+	state = playerStates.puppet;
+	stop_signal("puppet");
+}
+else { state = playerStates.normal; }
+
 if got_signal("spawn") && assert(instance_number(trigSpawn) == 1, "Invalid spawn!")
 {
 	send_signal(gameCamera, "snap", true);
@@ -8,6 +15,8 @@ if got_signal("spawn") && assert(instance_number(trigSpawn) == 1, "Invalid spawn
 	
 	stop_signal("spawn");
 }
+
+if state != playerStates.normal { exit; }
 
 spd = global.run ? 2 : 1;
 

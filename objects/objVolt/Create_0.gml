@@ -1,0 +1,1 @@
+electrocuteTimer = 0;

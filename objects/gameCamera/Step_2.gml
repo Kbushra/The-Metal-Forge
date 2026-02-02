@@ -36,4 +36,4 @@ if targetY > y { y = floor(exponential_out(ystart, targetY, progressY, 3)); }
 progressX += 0.02;
 progressY += 0.02;
 
-camera_set_view_pos(view_camera[0], x, y);
+camera_set_view_pos(view_camera[0], x + irandom_range(-shake, shake), y + irandom_range(-shake, shake));
