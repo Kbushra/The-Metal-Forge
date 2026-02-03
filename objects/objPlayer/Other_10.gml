@@ -1,4 +1,4 @@
-function solid_collisions()
+solid_collisions = function()
 {
 	if !place_free(x + hsp * spd, y)
 	{
@@ -13,7 +13,7 @@ function solid_collisions()
 	}
 }
 
-function is_movement_key(key)
+is_movement_key = function(key)
 {
 	var keys = struct_get_names(gameControl.directionKey);
 	for (var i = 0; i < array_length(keys); i++)
@@ -22,7 +22,7 @@ function is_movement_key(key)
 	return false;
 }
 
-function key_to_dir(key)
+key_to_dir = function(key)
 {
 	var keys = struct_get_names(gameControl.directionKey);
 	for (var i = 0; i < array_length(keys); i++)
@@ -31,7 +31,7 @@ function key_to_dir(key)
 	return "";
 }
 
-function initial_dir(hsp, vsp)
+initial_dir = function(hsp, vsp)
 {
 	if hsp == 0 && vsp == 0 { return ""; }
 	
@@ -52,7 +52,7 @@ function initial_dir(hsp, vsp)
 	}
 }
 
-function update_direction()
+update_direction = function()
 {
 	//establish first direction
 	if !moving

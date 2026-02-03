@@ -1,19 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"parentPathfinderAI",
+  "%Name":"parentMetalAI",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"parentPathfinderAI",
+  "name":"parentMetalAI",
   "overriddenProperties":[],
   "parent":{
-    "name":"Managers",
-    "path":"folders/Managers.yy",
+    "name":"Metals",
+    "path":"folders/Metals.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"parentMetal",
+    "path":"objects/parentMetal/parentMetal.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

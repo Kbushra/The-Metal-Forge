@@ -1,19 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"objPlayerGhost",
+  "%Name":"objMetalGrill",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objPlayerGhost",
+  "name":"objMetalGrill",
   "overriddenProperties":[],
   "parent":{
-    "name":"Player",
-    "path":"folders/Player.yy",
+    "name":"Metals",
+    "path":"folders/Metals.yy",
   },
-  "parentObjectId":null,
-  "persistent":true,
+  "parentObjectId":{
+    "name":"parentMetal",
+    "path":"objects/parentMetal/parentMetal.yy",
+  },
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -31,12 +34,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprPlayerD",
-    "path":"sprites/sprPlayerD/sprPlayerD.yy",
+    "name":"sprMetalGrill",
+    "path":"sprites/sprMetalGrill/sprMetalGrill.yy",
   },
-  "spriteMaskId":{
-    "name":"sprPlayerColl",
-    "path":"sprites/sprPlayerColl/sprPlayerColl.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }

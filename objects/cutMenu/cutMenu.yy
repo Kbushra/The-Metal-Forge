@@ -9,8 +9,8 @@
   "name":"cutMenu",
   "overriddenProperties":[],
   "parent":{
-    "name":"The Metal Forge",
-    "path":"The Metal Forge.yyp",
+    "name":"Cutscenes",
+    "path":"folders/Cutscenes.yy",
   },
   "parentObjectId":null,
   "persistent":false,

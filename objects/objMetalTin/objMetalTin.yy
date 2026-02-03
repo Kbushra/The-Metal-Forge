@@ -13,8 +13,8 @@
     "path":"folders/Metals.yy",
   },
   "parentObjectId":{
-    "name":"parentPathfinderAI",
-    "path":"objects/parentPathfinderAI/parentPathfinderAI.yy",
+    "name":"parentMetalAI",
+    "path":"objects/parentMetalAI/parentMetalAI.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

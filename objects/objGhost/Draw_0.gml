@@ -1,4 +1,4 @@
-with (objPlayer)
+with (origin)
 {
 	var prevAlpha = image_alpha;
 	var prevBlend = image_blend;

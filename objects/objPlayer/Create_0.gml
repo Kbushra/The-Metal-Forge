@@ -11,6 +11,6 @@ axis = VERTICAL;
 
 state = playerStates.normal;
 
-instance_create_depth(x, y, depth, objPlayerGhost);
+instance_create_depth(x, y, depth, objGhost, { origin: id });
 
 showColl = false;

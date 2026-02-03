@@ -34,3 +34,15 @@ function move_towards_point_overworld(_x, _y, _speed, _prevMoving = [true, true]
 	var newSignY = sign(_y - y);
 	return [newSignX == signX && signX != 0, newSignY == signY && signY != 0];
 }
+
+function move_angle(_angle, _spd)
+{
+	x += dcos(_angle) * _spd;
+	y -= dsin(_angle) * _spd;
+}
+
+function in_bounds(_x, _y)
+{
+	return _x > sprite_xoffset - sprite_width && _x < room_width + sprite_width - sprite_xoffset &&
+		_y > sprite_yoffset - sprite_height && _y < room_height + sprite_height - sprite_yoffset;
+}

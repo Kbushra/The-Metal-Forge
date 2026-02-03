@@ -39,8 +39,8 @@
     "path":"sprites/sprPathfinder/sprPathfinder.yy",
   },
   "spriteMaskId":{
-    "name":"sprPlayerCollCentre",
-    "path":"sprites/sprPlayerCollCentre/sprPlayerCollCentre.yy",
+    "name":"sprPathfinderMask",
+    "path":"sprites/sprPathfinderMask/sprPathfinderMask.yy",
   },
   "visible":true,
 }

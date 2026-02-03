@@ -2,7 +2,7 @@ print("pathfinder created");
 
 image_alpha = 0;
 
-tileSize = 20;
+tileSize = 32;
 sourceX = 0;
 sourceY = 0;
 sourceTileX = floor(sourceX / tileSize);

@@ -1,7 +1,8 @@
-if origin != noone && place_meeting(x, y, origin) { depth = origin.depth + 1; }
-else { depth = -999; }
+depth = -999;
 
 image_angle += 20;
+
+if !in_bounds(x, y) && alarm[0] <= 0 { alarm[0] = 120; exit; }
 
 if electrocuteTimer > 0
 {

@@ -55,7 +55,12 @@ tileY = clamp(tileY, 0, array_length(gamePathfinder.nodes[tileX]) - 1);
 if !array_equals(moving, [false, false]) //Go to tile
 {
 	//Can't pathfind with nowhere to go
-	if array_length(next) == 0 { moving = [false, false]; state = pathfinderStates.wander; exit; }
+	if array_length(next) == 0
+	{
+		moving = [false, false];
+		state = pathfinderStates.wander;
+		exit;
+	}
 	
 	axis = get_axis_from_spd(next[0] - x, next[1] - y);
 	dir = get_dir(next[0] - x, next[1] - y, axis);
