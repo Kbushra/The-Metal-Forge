@@ -119,8 +119,8 @@
   "maintainGms1Font":false,
   "name":"fntMain",
   "parent":{
-    "name":"The Metal Forge",
-    "path":"The Metal Forge.yyp",
+    "name":"Fonts",
+    "path":"folders/Fonts.yy",
   },
   "pointRounding":0,
   "ranges":[

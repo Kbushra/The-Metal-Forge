@@ -29,7 +29,7 @@ if attackOut
 		{
 			morphTimer--;
 			
-			if instance_exists(volt) && in_bounds(volt.x, volt.y) &&
+			if instance_exists(volt) && in_bounds_strict(volt.x, volt.y) &&
 			place_free(volt.x, volt.y) && !tp && morphTimer <= 10
 			{
 				targX = volt.x;
@@ -50,7 +50,8 @@ if attackOut
 				}
 				
 				image_alpha = lerp(image_alpha, 0, 0.2);
-				if near_equals(image_alpha, 0, 0.05) { morph = false; tp = false; }
+				if near_equals(image_alpha, 0, 0.05) && !instance_exists(volt)
+				{ morph = false; tp = false; }
 			}
 			else if morphTimer <= 0 { morph = false; morphFail = true; }
 			

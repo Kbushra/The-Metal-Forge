@@ -11,8 +11,8 @@
   "name":"objVolt",
   "overriddenProperties":[],
   "parent":{
-    "name":"The Metal Forge",
-    "path":"The Metal Forge.yyp",
+    "name":"Attacks",
+    "path":"folders/Metals/Attacks.yy",
   },
   "parentObjectId":null,
   "persistent":false,
