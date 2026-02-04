@@ -49,3 +49,9 @@ function in_bounds(_x, _y)
 
 function in_bounds_strict(_x, _y)
 { return _x > 0 && _x < room_width && _y > 0 && _y < room_height; }
+
+function room_goto_spawn(rm)
+{
+	room_goto(rm);
+	send_signal(objPlayer, "spawn", true);
+}

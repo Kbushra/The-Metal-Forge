@@ -4,7 +4,7 @@ function exponential_ease(a, b, amt, pwr)
     
     amt = clamp(amt, 0, 1);
     
-    if amt > 0.85 { amt = 1; }
+    //if amt > 0.85 { amt = 1; }
     
     if amt <= 0.5
     {
@@ -25,7 +25,7 @@ function exponential_out(a, b, amt, pwr)
     
     amt = clamp(amt, 0, 1);
     
-    if amt > 0.85 { amt = 1; }
+    //if amt > 0.85 { amt = 1; }
     
     progress = 1 - power((1 - amt), pwr);
     

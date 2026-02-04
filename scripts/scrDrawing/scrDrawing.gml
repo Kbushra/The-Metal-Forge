@@ -14,3 +14,11 @@ function draw_reset()
 	gpu_set_blendmode(bm_normal);
 	shader_reset();
 }
+
+function draw_list(_x, _y, gapY, selected, item1)
+{
+	for (var i = 0; i < argument_count - 4; i++)
+	{
+		draw_text(_x, _y + gapY * i, (i == selected ? "> " : "") + argument[i + 4]);
+	}
+}

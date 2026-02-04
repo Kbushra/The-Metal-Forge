@@ -1,5 +1,1 @@
-if room == rmStart
-{
-	room_goto(rmMenu);
-	send_signal(objPlayer, "spawn", true);
-}
+if room == rmStart { room_goto_spawn(rmMenu); }

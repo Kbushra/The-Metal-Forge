@@ -18,7 +18,9 @@ if got_signal("spawn") && assert(instance_number(trigSpawn) == 1, "Invalid spawn
 
 if state != playerStates.normal { exit; }
 
-spd = global.run ? 2 : 1;
+image_angle = 0;
+
+spd = global.deny ? 2 : 1;
 
 prevHsp = hsp;
 prevVsp = vsp;
@@ -36,4 +38,4 @@ update_direction();
 if image_speed != moving { image_index = moving; }
 image_speed = moving;
 
-sprite_index = asset_get_index($"sprPlayer{correct_horizontal_dir(faceDirection)}{global.run && moving ? "R" : ""}");
+sprite_index = asset_get_index($"sprPlayer{correct_horizontal_dir(faceDirection)}{global.deny && moving ? "R" : ""}");

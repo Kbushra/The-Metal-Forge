@@ -12,6 +12,7 @@
   "Folders":[
     {"$GMFolder":"","%Name":"Cutscenes","folderPath":"folders/Cutscenes.yy","name":"Cutscenes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Bgm","folderPath":"folders/Bgm.yy","name":"Bgm","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Managers","folderPath":"folders/Managers.yy","name":"Managers","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Metals","folderPath":"folders/Metals.yy","name":"Metals","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Attacks","folderPath":"folders/Metals/Attacks.yy","name":"Attacks","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -19,6 +20,7 @@
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Variables","folderPath":"folders/Scripts/Variables.yy","name":"Variables","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Sfx","folderPath":"folders/Sfx.yy","name":"Sfx","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Tiles","folderPath":"folders/Tiles.yy","name":"Tiles","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Triggers","folderPath":"folders/Triggers.yy","name":"Triggers","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"UI","folderPath":"folders/UI.yy","name":"UI","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -33,6 +35,7 @@
   "name":"The Metal Forge",
   "resources":[
     {"id":{"name":"fntMain","path":"fonts/fntMain/fntMain.yy",},},
+    {"id":{"name":"fntSmall","path":"fonts/fntSmall/fntSmall.yy",},},
     {"id":{"name":"cutMenu","path":"objects/cutMenu/cutMenu.yy",},},
     {"id":{"name":"gameAsserter","path":"objects/gameAsserter/gameAsserter.yy",},},
     {"id":{"name":"gameCamera","path":"objects/gameCamera/gameCamera.yy",},},
@@ -62,6 +65,7 @@
     {"id":{"name":"rmStart","path":"rooms/rmStart/rmStart.yy",},},
     {"id":{"name":"scrActions","path":"scripts/scrActions/scrActions.yy",},},
     {"id":{"name":"scrAssert","path":"scripts/scrAssert/scrAssert.yy",},},
+    {"id":{"name":"scrAudio","path":"scripts/scrAudio/scrAudio.yy",},},
     {"id":{"name":"scrDrawing","path":"scripts/scrDrawing/scrDrawing.yy",},},
     {"id":{"name":"scrEasing","path":"scripts/scrEasing/scrEasing.yy",},},
     {"id":{"name":"scrMacrosEnums","path":"scripts/scrMacrosEnums/scrMacrosEnums.yy",},},

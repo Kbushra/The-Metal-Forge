@@ -23,7 +23,7 @@
   ],
   "name":"sprTitle",
   "nineSlice":null,
-  "origin":0,
+  "origin":1,
   "parent":{
     "name":"The Metal Forge",
     "path":"The Metal Forge.yyp",
@@ -75,7 +75,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":80,
     "yorigin":0,
   },
   "swatchColours":null,

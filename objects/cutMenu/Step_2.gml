@@ -4,6 +4,7 @@ if step == 0
 {
 	objPlayer.x += 2;
 	objPlayer.sprite_index = sprPlayerRR;
+	objPlayer.image_speed = 1;
 	
 	if objPlayer.x >= 100 && !instance_exists(objVolt)
 	{ instance_create_depth(-32, 208, 0, objVolt, { origin: id }); }
@@ -34,5 +35,22 @@ if step == 2
 	}
 	
 	time--;
-	if time <= 0 { step++; }
+	if time <= 0 { step++; time = 120; }
 }
+
+if step == 3
+{
+	titleEase += 0.02;
+	
+	time--;
+	if time <= 0 { step++; titleEase = 0; }
+}
+
+if step < 4 { exit; }
+
+gameCamera.shake = 0;
+titleEase += 0.02;
+	
+move_selection();
+if selected[0] == 0 && selectStage == 1 { room_goto_spawn(rmMain); }
+if selected[0] == 1 && selectStage == 1 { manage_audio(); }

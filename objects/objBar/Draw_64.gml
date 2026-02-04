@@ -12,6 +12,7 @@ draw_set_colour(c_white);
 
 draw_set_halign(fa_right)
 draw_set_valign(fa_center);
+draw_set_font(fntSmall);
 draw_text(x - 5, y, name);
 
 draw_reset();
