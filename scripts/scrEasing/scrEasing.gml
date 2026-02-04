@@ -19,6 +19,19 @@ function exponential_ease(a, b, amt, pwr)
     return lerp(a, b, progress);
 }
 
+function exponential_in(a, b, amt, pwr)
+{
+    var progress;
+    
+    amt = clamp(amt, 0, 1);
+    
+    //if amt > 0.85 { amt = 1; }
+    
+    progress = power(amt, pwr);
+    
+    return lerp(a, b, progress);
+}
+
 function exponential_out(a, b, amt, pwr)
 {
     var progress;

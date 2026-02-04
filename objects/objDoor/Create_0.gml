@@ -1,0 +1,1 @@
+offset = destRoom == NONE ? 0.5 : 0;

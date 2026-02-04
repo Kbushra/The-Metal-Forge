@@ -7,15 +7,6 @@ if got_signal("puppet")
 }
 else { state = playerStates.normal; }
 
-if got_signal("spawn") && assert(instance_number(trigSpawn) == 1, "Invalid spawn!")
-{
-	send_signal(gameCamera, "snap", true);
-	x = trigSpawn.x;
-	y = trigSpawn.y;
-	
-	stop_signal("spawn");
-}
-
 if state != playerStates.normal { exit; }
 
 image_angle = 0;

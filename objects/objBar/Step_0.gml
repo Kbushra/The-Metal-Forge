@@ -1,3 +1,6 @@
+visible = room != rmMenu;
+if !visible { hp = maxHp; }
+
 if shownHp < hp
 {
 	shownHp = lerp(shownHp, hp, 0.1);

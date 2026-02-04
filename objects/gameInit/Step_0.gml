@@ -1,1 +1,1 @@
-if room == rmStart { room_goto_spawn(rmMenu); }
+if room == rmStart { room_goto(rmMenu); }
