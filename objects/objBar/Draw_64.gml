@@ -8,8 +8,7 @@ draw_rectangle(x - sprite_width * (highlight + offset), y - sprite_height/2, x, 
 draw_set_colour(fg);
 draw_rectangle(x - sprite_width * shownHp/maxHp, y - sprite_height/2, x, y + sprite_height/2, false);
 
-draw_set_colour(c_white);
-
+draw_set_colour(hp > 40 ? c_white : c_red);
 draw_set_halign(fa_right)
 draw_set_valign(fa_center);
 draw_set_font(fntSmall);

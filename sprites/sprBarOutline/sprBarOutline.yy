@@ -44,8 +44,8 @@
   },
   "origin":5,
   "parent":{
-    "name":"UI",
-    "path":"folders/UI.yy",
+    "name":"Bars",
+    "path":"folders/UI/Bars.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

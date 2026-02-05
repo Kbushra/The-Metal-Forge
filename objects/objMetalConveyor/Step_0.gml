@@ -15,7 +15,12 @@ else if spd < 0
 }
 
 spd += 0.1;
+spd = clamp(spd, -6, 6);
 
 move_angle(image_angle, spd * image_xscale);
 
-if spd >= 0 && !place_free(x, y) { spd = clamp(-spd/2, -3, -0.5); }
+if spd >= 0 && !place_free(x, y)
+{
+	spd = clamp(-spd/2, -3, -0.5);
+	objBarBuilding.hp -= abs(spd) / 4;
+}

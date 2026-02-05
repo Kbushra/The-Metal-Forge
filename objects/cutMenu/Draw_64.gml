@@ -1,7 +1,12 @@
 var controls = @"Controls:
 Arrows/WASD to move
-Z/Enter to confirm
-X/Shift to deny or run
+" + (os_browser == browser_not_a_browser ? "F4" : "F10") + @" to fullscreen
+
+Z/ENTER to confirm
+X/SHIFT to deny or run
+
+C/CTRL to show construction
+Q/E to move construction select
 ";
 
 if step == 3

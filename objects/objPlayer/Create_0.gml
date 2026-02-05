@@ -9,6 +9,10 @@ firstDirection = "";
 faceDirection = "D";
 axis = VERTICAL;
 
+knockbackX = 0;
+knockbackY = 0;
+knockbackTime = 1;
+
 state = playerStates.normal;
 
 instance_create_depth(x, y, depth, objGhost, { origin: id });

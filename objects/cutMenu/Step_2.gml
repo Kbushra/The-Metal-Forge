@@ -1,5 +1,7 @@
 send_signal(objPlayer, "puppet", true);
 
+if !window_has_focus() { exit; }
+
 if step == 0
 {
 	objPlayer.x += 2;

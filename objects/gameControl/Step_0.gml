@@ -11,3 +11,7 @@ global.upPress = keyboard_check_pressed(directionKey.U) || keyboard_check_presse
 
 global.confirm = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("Z"));
 global.deny = keyboard_check(vk_shift) || keyboard_check_pressed(ord("X"));
+
+global.construct = keyboard_check_pressed(vk_control) || keyboard_check_pressed(ord("C"));
+global.constructLeft = keyboard_check_pressed(ord("Q"));
+global.constructRight = keyboard_check_pressed(ord("E"));

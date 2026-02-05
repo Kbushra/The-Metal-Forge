@@ -5,13 +5,15 @@
 #macro VERTICAL 1
 #macro NONE -1
 
-#macro RAND_WANDER irandom_range(120, 180)
+#macro RAND_WANDER (irandom_range(120, 180))
+#macro RAND_ENEMYSPAWN (irandom_range(360, 540)/2)
 
 #macro print show_debug_message
 
 enum playerStates
 {
 	normal,
+	knockback,
 	puppet
 }
 
@@ -32,4 +34,26 @@ enum pathfinderStates
 	puppet,
 	wander,
 	pathfind
+}
+
+enum enemyNames
+{
+	tin,
+	conveyor,
+	grill
+}
+
+enum buildingNames
+{
+	magnet,
+	magnetCoiled
+}
+
+enum resourceNames
+{
+	metal,
+	cog,
+	rod,
+	battery,
+	quantam
 }

@@ -75,3 +75,17 @@ update_direction = function()
 	firstDirection = get_dir(hsp, vsp, axis);
 	axis = get_axis(firstDirection, axis); //Update axis when direction axis changes
 }
+
+///@func knock(xChange, yChange, intensity, [dmg])
+knock = function(xChange, yChange, intensity, dmg = 0)
+{
+	if state == playerStates.knockback { return; }
+	
+	objBarHealth.hp -= dmg;
+	
+	xstart = x;
+	ystart = y;
+	knockbackX = x + sign(xChange) * intensity;
+	knockbackY = y + sign(yChange) * intensity;
+	knockbackTime = 0;
+}
