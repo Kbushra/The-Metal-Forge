@@ -27,7 +27,7 @@
   "origin":4,
   "parent":{
     "name":"Buildings",
-    "path":"folders/UI/Construction/Buildings.yy",
+    "path":"folders/Construction/Buildings.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

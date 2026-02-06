@@ -1,3 +1,4 @@
+///@func solid_collisions()
 solid_collisions = function()
 {
 	if !place_free(x + hsp * spd, y)
@@ -13,6 +14,7 @@ solid_collisions = function()
 	}
 }
 
+///@func is_movement_key(key)
 is_movement_key = function(key)
 {
 	var keys = struct_get_names(gameControl.directionKey);
@@ -22,6 +24,7 @@ is_movement_key = function(key)
 	return false;
 }
 
+///@func key_to_dir(key)
 key_to_dir = function(key)
 {
 	var keys = struct_get_names(gameControl.directionKey);
@@ -31,6 +34,7 @@ key_to_dir = function(key)
 	return "";
 }
 
+///@func initial_dir(hsp, vsp)
 initial_dir = function(hsp, vsp)
 {
 	if hsp == 0 && vsp == 0 { return ""; }
@@ -52,6 +56,7 @@ initial_dir = function(hsp, vsp)
 	}
 }
 
+///@func update_direction()
 update_direction = function()
 {
 	//establish first direction
@@ -60,8 +65,7 @@ update_direction = function()
 		firstDirection = initial_dir(hsp, vsp);
 		
 		if firstDirection != "" { moving = true; }
-		else if is_movement_key(keyboard_key) && state == playerStates.normal
-		{ firstDirection = key_to_dir(keyboard_key); }
+		else if state == playerStates.normal { firstDirection = stillDirection; }
 	}
 	
 	//stopping movement
@@ -71,6 +75,8 @@ update_direction = function()
 	if firstDirection != "" { faceDirection = firstDirection; }
 	
 	if !moving { exit; }
+	
+	if is_movement_key(keyboard_key) { stillDirection = key_to_dir(keyboard_key); }
 	
 	firstDirection = get_dir(hsp, vsp, axis);
 	axis = get_axis(firstDirection, axis); //Update axis when direction axis changes

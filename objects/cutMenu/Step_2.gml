@@ -56,3 +56,4 @@ titleEase += 0.02;
 move_selection();
 if selected[0] == 0 && selectStage == 1 && !instance_exists(cutTransition) { room_transition(rmLevel1); }
 if selected[0] == 1 && selectStage == 1 { manage_audio(); }
+if selected[0] == 2 { selectStage = 0; }

@@ -40,13 +40,17 @@ enum enemyNames
 {
 	tin,
 	conveyor,
-	grill
+	grill,
+	
+	length
 }
 
 enum buildingNames
 {
 	magnet,
-	magnetCoiled
+	magnetCoiled,
+	
+	length
 }
 
 enum resourceNames
@@ -55,5 +59,7 @@ enum resourceNames
 	cog,
 	rod,
 	battery,
-	quantam
+	quantum,
+	
+	length
 }

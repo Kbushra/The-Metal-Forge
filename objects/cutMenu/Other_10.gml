@@ -7,7 +7,7 @@ move_selection = function()
 	if global.upPress { selected[selectStage]--; }
 	if global.downPress { selected[selectStage]++; }
 	
-	var len = selectStage == 0 ? 2 : selectLen[selected[0]];
+	var len = selectStage == 0 ? 3 : selectLen[selected[0]];
 	selected[selectStage] = (selected[selectStage] + len) % len;
 }
 

@@ -1,0 +1,1 @@
+global.resourceCount[resourceNames.metal] = 8;

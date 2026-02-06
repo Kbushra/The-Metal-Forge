@@ -3,7 +3,7 @@ alarm[0] = RAND_ENEMYSPAWN;
 image_index = 0;
 image_speed = 0;
 
-part_particles_burst(spawnPs, x, y, psEnemySpawn);
+part_particles_burst(spawnPs, x, y, psEnemy);
 
 var chance = random(1);
 var counter = 0;

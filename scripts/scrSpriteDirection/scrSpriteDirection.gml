@@ -12,6 +12,19 @@ function get_dir(_numX, _numY, priorityAxis)
 	return "D";
 }
 
+function get_spd_from_dir(dir)
+{
+	switch dir
+	{
+		case "R": return [1, 0];
+		case "L": return [-1, 0];
+		case "D": return [0, 1];
+		case "U": return [0, -1];
+	}
+	
+	return [0, 0];
+}
+
 function correct_horizontal_dir(dir)
 {
 	if dir == "R" || dir == "L"

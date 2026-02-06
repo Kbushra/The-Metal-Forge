@@ -14,7 +14,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Construction",
-    "path":"folders/UI/Construction.yy",
+    "path":"folders/Construction.yy",
   },
   "parentObjectId":null,
   "persistent":true,

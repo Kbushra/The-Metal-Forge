@@ -1,15 +1,20 @@
 {
   "$GMObject":"",
   "%Name":"objBuildingMagnet",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"objBuildingMagnet",
   "overriddenProperties":[],
   "parent":{
     "name":"Buildings",
-    "path":"folders/UI/Construction/Buildings.yy",
+    "path":"folders/Construction/Buildings.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"parentBuilding",
+    "path":"objects/parentBuilding/parentBuilding.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -26,7 +31,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
     "name":"sprBuildingMagnet",
     "path":"sprites/sprBuildingMagnet/sprBuildingMagnet.yy",

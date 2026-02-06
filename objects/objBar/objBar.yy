@@ -11,8 +11,8 @@
   "name":"objBar",
   "overriddenProperties":[],
   "parent":{
-    "name":"Bars",
-    "path":"folders/UI/Bars.yy",
+    "name":"UI",
+    "path":"folders/UI.yy",
   },
   "parentObjectId":null,
   "persistent":true,

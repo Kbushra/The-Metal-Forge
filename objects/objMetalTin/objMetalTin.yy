@@ -8,7 +8,9 @@
   ],
   "managed":true,
   "name":"objMetalTin",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"parentMetal","path":"objects/parentMetal/parentMetal.yy",},"propertyId":{"name":"ind","path":"objects/parentMetal/parentMetal.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"enemyNames.tin",},
+  ],
   "parent":{
     "name":"Metals",
     "path":"folders/Metals.yy",

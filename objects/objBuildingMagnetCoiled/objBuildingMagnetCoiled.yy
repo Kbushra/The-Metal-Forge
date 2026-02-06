@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Buildings",
-    "path":"folders/UI/Construction/Buildings.yy",
+    "path":"folders/Construction/Buildings.yy",
   },
   "parentObjectId":{
     "name":"objBuildingMagnet",
@@ -29,7 +29,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
     "name":"sprBuildingMagnetCoiled",
     "path":"sprites/sprBuildingMagnetCoiled/sprBuildingMagnetCoiled.yy",
