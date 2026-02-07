@@ -1,4 +1,4 @@
-if room == rmMenu { open = false; }
+if objPlayer.state == playerStates.puppet { open = false; }
 else if global.construct { open = !open; }
 
 if open { y = lerp(y, 0, 0.2); }

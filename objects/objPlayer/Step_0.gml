@@ -1,9 +1,8 @@
 depth = -bbox_bottom;
 
 if got_signal("puppet") { state = playerStates.puppet;	}
+else if knockbackTime < 1 { state = playerStates.knockback; }
 else { state = playerStates.normal; }
-
-if knockbackTime < 1 { state = playerStates.knockback; }
 
 stop_signal("puppet");
 stop_signal("knockback");

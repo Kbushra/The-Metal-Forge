@@ -25,7 +25,5 @@ with (objPlayer)
 {
 	send_signal(id, "puppet", true);
 	sprite_index = sign(other.x - x) == -1 ? sprPlayerUPunchL : sprPlayerUPunchR;
-		
 	image_speed = 1;
-	image_index = 0;
 }

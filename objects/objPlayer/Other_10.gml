@@ -96,3 +96,12 @@ knock = function(xChange, yChange, intensity, dmg = 0)
 	knockbackTime = 0;
 	state = playerStates.knockback;
 }
+
+///@func freeze()
+freeze = function()
+{
+	sprite_index = asset_get_index($"sprPlayer{correct_horizontal_dir(faceDirection)}");
+	image_speed = 0;
+	image_index = 0;
+	image_blend = merge_colour(image_blend, c_white, 0.1);
+}

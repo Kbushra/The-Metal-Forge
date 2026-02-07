@@ -16,6 +16,6 @@ knockbackTime = 1;
 
 state = playerStates.normal;
 
-instance_create_depth(x, y, depth, objGhost, { origin: id });
+ghost = instance_create_depth(x, y, depth, objGhost, { origin: id });
 
 showColl = false;

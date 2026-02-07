@@ -34,21 +34,29 @@ draw_text(GAME_WIDTH/2 - 64 + 10, 70 + 10*count, $"TOTAL: ${objProfit.profit}");
 
 if animateTime < 3.5 + 0.1*resourceNames.length { draw_reset(); exit; }
 
-var rankCount = 5; //S is excluded since its when no others match
+//Died
+if objBreakerPanel.image_index == 0
+{
+	draw_text(GAME_WIDTH/2 - 64 + 10, 90 + 10*count, $"RANK: DEAD");
+	draw_text_ext(GAME_WIDTH/2 - 64 + 10, 100 + 10*count, global.level[global.currLevel].comments[0], 10, 100);
+	exit;
+}
+
+var rankCount = 5; //S is excluded
+
+//S-Rank
+if objProfit.profit >= global.level[global.currLevel].ranks[rankCount - 1]
+{
+	draw_text(GAME_WIDTH/2 - 64 + 10, 90 + 10*count, $"RANK: S");
+	draw_text_ext(GAME_WIDTH/2 - 64 + 10, 100 + 10*count, global.level[global.currLevel].comments[rankCount], 10, 100);
+	exit;
+}
+
 for (var i = 0; i < rankCount; i++)
 {
-	if objProfit.profit >= global.level[global.currLevel].ranks[i]
-	{
-		if i == rankCount - 1
-		{
-			draw_text(GAME_WIDTH/2 - 64 + 10, 90 + 10*count, $"RANK: S");
-			draw_text_ext(GAME_WIDTH/2 - 64 + 10, 100 + 10*count, global.level[global.currLevel].comments[rankCount], 10, 100);
-		}
-		
-		continue;
-	}
+	if objProfit.profit >= global.level[global.currLevel].ranks[i] { continue; }
 	
-	var rank = "S";
+	var rank = "F";
 	
 	switch i
 	{
