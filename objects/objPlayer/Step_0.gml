@@ -14,7 +14,15 @@ if state == playerStates.knockback
 	var prevY = y;
 	x = exponential_out(xstart, knockbackX, knockbackTime, 2);
 	y = exponential_out(ystart, knockbackY, knockbackTime, 2);
-	if !place_free(x, y) { x = prevX; y = prevY; }
+	if !place_free(x, y)
+	{
+		x = prevX;
+		y = prevY;
+		xstart = x;
+		ystart = y;
+		knockbackX = x;
+		knockbackY = y;
+	}
 	
 	image_speed = 0;
 	image_index = 0;

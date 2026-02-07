@@ -13,6 +13,8 @@ if objPlayer.faceDirection != "U" || !place_meeting(x, y + 5, objPlayer) || brea
 
 draw_set_font(fntSmall);
 draw_set_halign(fa_middle);
-draw_text(x, y + sprite_height/2 + 2, objProfit.profit < 2500 ? $"Resign?\n(< {minimum})" : "Break?");
+
+var minimum = global.level[global.currLevel].ranks[0];
+draw_text(x, y + sprite_height/2 + 2, $"Break?\n(>= ${minimum} to pass)");
 
 draw_reset();

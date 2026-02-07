@@ -2,7 +2,7 @@ depth = -999;
 
 image_angle += 20;
 
-if !in_bounds(x, y) && alarm[0] <= 0 { alarm[0] = 120; exit; }
+if !in_bounds_strict(x, y) && alarm[0] <= 0 { alarm[0] = 120; exit; }
 
 if electrocuteTimer > 0
 {

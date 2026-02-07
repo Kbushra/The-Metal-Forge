@@ -129,6 +129,7 @@
     {"id":{"name":"sprPlayerUPunchL","path":"sprites/sprPlayerUPunchL/sprPlayerUPunchL.yy",},},
     {"id":{"name":"sprPlayerUPunchR","path":"sprites/sprPlayerUPunchR/sprPlayerUPunchR.yy",},},
     {"id":{"name":"sprPlayerUR","path":"sprites/sprPlayerUR/sprPlayerUR.yy",},},
+    {"id":{"name":"sprReceipt","path":"sprites/sprReceipt/sprReceipt.yy",},},
     {"id":{"name":"sprResourceBattery","path":"sprites/sprResourceBattery/sprResourceBattery.yy",},},
     {"id":{"name":"sprResourceCog","path":"sprites/sprResourceCog/sprResourceCog.yy",},},
     {"id":{"name":"sprResourceMetal","path":"sprites/sprResourceMetal/sprResourceMetal.yy",},},

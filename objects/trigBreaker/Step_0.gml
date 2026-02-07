@@ -8,7 +8,7 @@ if breaking
 	{
 		objBreakerPanel.image_index = 1;
 		with (trigEnemySpawn) { alarm[0] = 0; } //No more spawning
-		with (parentMetal) { state = pathfinderStates.puppet; }
+		with (parentMetal) { state = pathfinderStates.puppet; image_speed = 0; image_index = 0; }
 		with (trigDoor) { if destRoom != NONE { solid = false; } }
 	}
 	

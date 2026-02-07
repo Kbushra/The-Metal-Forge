@@ -29,7 +29,7 @@ if attackOut
 		{
 			morphTimer--;
 			
-			if instance_exists(volt) && in_bounds_strict(volt.x, volt.y) &&
+			if instance_exists(volt) && in_bounds_loose(volt.x, volt.y) &&
 			place_free(volt.x, volt.y) && !tp && morphTimer <= 10
 			{
 				targX = volt.x;

@@ -2,6 +2,7 @@ randomise();
 draw_set_font(fntMain);
 
 event_user(0);
+event_user(1);
 for (var i = 0; i < resourceNames.length; i++) { global.resourceCount[i] = 0; }
 
 global.sfxEmitter = audio_emitter_create();
