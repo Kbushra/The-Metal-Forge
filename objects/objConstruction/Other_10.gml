@@ -7,7 +7,8 @@ global.buildings[buildingNames.magnet] =
 	placer: objPlacerMagnet,
 	resourceTypes: [resourceNames.metal],
 	resourceQuantities: [5],
-	desc: "Tears metal apart within 1 tile"
+	desc: "Tears metal apart within 1 tile",
+	count: 2
 };
 
 global.buildings[buildingNames.magnetCoiled] =
@@ -17,5 +18,6 @@ global.buildings[buildingNames.magnetCoiled] =
 	placer: objPlacerMagnetCoiled,
 	resourceTypes: [resourceNames.metal, resourceNames.rod],
 	resourceQuantities: [8, 4],
-	desc: "Tears metal apart within 2 tiles"
+	desc: "Tears metal apart within 2 tiles",
+	count: 1
 };

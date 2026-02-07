@@ -6,7 +6,9 @@
   ],
   "managed":true,
   "name":"objBuildingMagnet",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"parentBuilding","path":"objects/parentBuilding/parentBuilding.yy",},"propertyId":{"name":"ind","path":"objects/parentBuilding/parentBuilding.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"buildingNames.magnet",},
+  ],
   "parent":{
     "name":"Buildings",
     "path":"folders/Construction/Buildings.yy",

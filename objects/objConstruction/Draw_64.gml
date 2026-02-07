@@ -39,4 +39,12 @@ for (var i = 0; i < array_length(reqResources); i++)
 draw_text_ext_transformed(x, y + 19 + 10*((array_length(reqResources) - 1) div 2),
 	availableBuildings[selected].desc, 10, 150, 0.5, 0.5, 0);
 
+draw_set_halign(fa_middle);
+draw_set_colour(instance_number(availableBuildings[selected].obj) >=
+	availableBuildings[selected].count ? c_red : c_white);
+
+draw_text_transformed(x - sprite_width/2 + 40, y + sprite_height/2 + 16,
+	$"{instance_number(availableBuildings[selected].obj)}/{availableBuildings[selected].count}",
+		0.5, 0.5, 0);
+
 draw_reset();

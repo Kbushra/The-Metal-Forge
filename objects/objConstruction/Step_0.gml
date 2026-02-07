@@ -19,9 +19,12 @@ for (var i = 0; i < array_length(reqResources); i++)
 	if obtained < required { canAfford = false; break; }
 }
 
-if canAfford && !instance_exists(availableBuildings[selected].placer)
+var reachedLimit = instance_number(availableBuildings[selected].obj) >=
+	availableBuildings[selected].count;
+
+if canAfford && !reachedLimit && !instance_exists(availableBuildings[selected].placer)
 {
 	instance_destroy(parentPlacer);
 	instance_create_depth(x, y, depth, availableBuildings[selected].placer);
 }
-else if !canAfford { instance_destroy(parentPlacer); }
+else if !canAfford || reachedLimit { instance_destroy(parentPlacer); }

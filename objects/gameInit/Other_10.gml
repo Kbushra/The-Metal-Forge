@@ -28,33 +28,33 @@ global.resource[resourceNames.metal] =
 {
 	obj: objResourceMetal,
 	icon: sprResourceMetal,
-	sell: 4
+	sell: 105
 }
 
 global.resource[resourceNames.cog] =
 {
 	obj: objResourceCog,
 	icon: sprResourceCog,
-	sell: 5
+	sell: 124
 }
 
 global.resource[resourceNames.rod] =
 {
 	obj: objResourceRod,
 	icon: sprResourceRod,
-	sell: 5
+	sell: 132
 }
 
 global.resource[resourceNames.battery] =
 {
 	obj: objResourceBattery,
 	icon: sprResourceBattery,
-	sell: 10
+	sell: 231
 }
 
 global.resource[resourceNames.quantum] =
 {
 	obj: objResourceQuantum,
 	icon: sprResourceQuantum,
-	sell: 25
+	sell: 1006
 }

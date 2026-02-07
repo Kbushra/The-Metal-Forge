@@ -1,3 +1,5 @@
+event_inherited();
+
 send_place_signal("pathfind");
 
 state = pathfinderStates.wander;
