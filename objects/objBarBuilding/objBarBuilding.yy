@@ -7,7 +7,7 @@
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objBar","path":"objects/objBar/objBar.yy",},"propertyId":{"name":"bg","path":"objects/objBar/objBar.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FF660000",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objBar","path":"objects/objBar/objBar.yy",},"propertyId":{"name":"fg","path":"objects/objBar/objBar.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FFD1A208",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objBar","path":"objects/objBar/objBar.yy",},"propertyId":{"name":"name","path":"objects/objBar/objBar.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"INTEGRITY",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objBar","path":"objects/objBar/objBar.yy",},"propertyId":{"name":"name","path":"objects/objBar/objBar.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"STABILITY",},
   ],
   "parent":{
     "name":"UI",

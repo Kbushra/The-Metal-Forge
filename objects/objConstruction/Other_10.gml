@@ -1,4 +1,22 @@
-///@desc Buildings
+///@desc Methods and buildings
+
+///@func can_place()
+can_place = function()
+{
+	var canAfford = true;
+	var reqResources = availableBuildings[selected].resourceTypes;
+	for (var i = 0; i < array_length(reqResources); i++)
+	{
+		var obtained = global.resourceCount[reqResources[i]];
+		var required = availableBuildings[selected].resourceQuantities[i];
+		if obtained < required { canAfford = false; break; }
+	}
+
+	var reachedLimit = instance_number(availableBuildings[selected].obj) >=
+		availableBuildings[selected].count;
+	
+	return canAfford && !reachedLimit;
+}
 
 global.buildings[buildingNames.magnet] =
 {

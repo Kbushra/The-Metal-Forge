@@ -94,4 +94,5 @@ knock = function(xChange, yChange, intensity, dmg = 0)
 	knockbackX = x + sign(xChange) * intensity;
 	knockbackY = y + sign(yChange) * intensity;
 	knockbackTime = 0;
+	state = playerStates.knockback;
 }

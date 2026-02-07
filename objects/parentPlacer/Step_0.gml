@@ -22,4 +22,6 @@ if global.confirm && valid
 	{
 		global.resourceCount[building.resourceTypes[i]] -= building.resourceQuantities[i];
 	}
+	
+	if !objConstruction.can_place() { objConstruction.open = false; }
 }
