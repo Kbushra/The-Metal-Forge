@@ -1,7 +1,5 @@
 event_inherited();
 
-state = pathfinderStates.wander;
-
 attackIn = false;
 attackOut = false;
 attackDelay = 60;

@@ -1,3 +1,5 @@
+if state == pathfinderStates.puppet { exit; }
+
 var xTarg = pathfinderStates.wander ? xstart : next[0];
 var yTarg = pathfinderStates.wander ? ystart : next[1];
 

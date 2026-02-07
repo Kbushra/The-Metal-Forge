@@ -1,0 +1,31 @@
+depth = -999;
+
+if breaking
+{
+	send_signal(objPlayer, "puppet", true);
+	
+	if objPlayer.image_index >= 3
+	{
+		objBreakerPanel.image_index = 1;
+		with (trigEnemySpawn) { alarm[0] = 0; } //No more spawning
+		with (parentMetal) { state = pathfinderStates.puppet; }
+		with (trigDoor) { if destRoom != NONE { solid = false; } }
+	}
+	
+	print(objPlayer.image_index);
+	if objPlayer.image_index >= 5 { breaking = false; }
+}
+
+if objPlayer.faceDirection != "U" || !place_meeting(x, y + 5, objPlayer) ||
+breaking || objBreakerPanel.image_index == 1 || !global.confirm { exit; }
+
+breaking = true;
+
+with (objPlayer)
+{
+	send_signal(id, "puppet", true);
+	sprite_index = sign(other.x - x) == -1 ? sprPlayerUPunchL : sprPlayerUPunchR;
+		
+	image_speed = 1;
+	image_index = 0;
+}
