@@ -22,5 +22,5 @@ move_angle(image_angle, spd * image_xscale);
 if spd >= 0 && !place_free(x, y)
 {
 	spd = clamp(-spd/2, -3, -0.5);
-	objBarBuilding.hp -= abs(spd) / 4;
+	objBarBuilding.deal_damage(abs(spd) / 4);
 }

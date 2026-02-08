@@ -5,6 +5,21 @@ global.currLevel = 0;
 global.level[0] = 
 {
 	name: "Tutorial",
+	ranks: [2500, 3000, 3500, 4000, 9000],
+	comments:
+	[
+		"Doesn't feel like you were learning.",
+		"Did you learn something?",
+		"Did you learn something?",
+		"Seems you learnt something.",
+		"Seems you learnt something.",
+		"Okay you didn't have to try so hard."
+	]
+};
+
+global.level[1] = 
+{
+	name: "The Hall",
 	ranks: [2500, 4000, 6500, 9000, 12000],
 	comments:
 	[

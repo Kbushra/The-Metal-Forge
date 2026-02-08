@@ -52,8 +52,15 @@ if step < 4 { exit; }
 
 gameCamera.shake = 0;
 titleEase += 0.02;
-	
-move_selection();
-if selected[0] == 0 && selectStage == 1 && !instance_exists(cutTransition) { room_transition(rmLevel1); }
+
+if selected[0] == 0 && selectStage == 1 && global.confirm && !instance_exists(cutTransition)
+{
+	json_write();
+	global.currLevel = selected[1];
+	room_transition(global.currLevel == 0 ? rmTutorial : asset_get_index($"rmLevel{global.currLevel}"));
+}
+
 if selected[0] == 1 && selectStage == 1 { manage_audio(); }
-if selected[0] == 2 { selectStage = 0; }
+if selected[0] == 2 && global.confirm { json_write(); game_end(); exit; }
+
+move_selection();

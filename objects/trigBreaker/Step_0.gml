@@ -1,5 +1,7 @@
 depth = -999;
 
+if !active { exit; }
+
 if breaking
 {
 	send_signal(objPlayer, "puppet", true);
@@ -9,10 +11,9 @@ if breaking
 		objBreakerPanel.image_index = 1;
 		with (trigEnemySpawn) { alarm[0] = 0; } //No more spawning
 		with (parentMetal) { state = pathfinderStates.puppet; image_speed = 0; image_index = 0; }
-		with (trigDoor) { if destRoom != NONE { solid = false; } }
+		with (trigDoor) { if destRoom != noone { solid = false; } }
 	}
 	
-	print(objPlayer.image_index);
 	if objPlayer.image_index >= 5 { breaking = false; }
 }
 

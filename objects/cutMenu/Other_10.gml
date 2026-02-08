@@ -1,7 +1,7 @@
 move_selection = function()
 {
 	if global.confirm { selectStage++; }
-	if global.deny { selectStage--; }
+	if global.deny { selected[1] = 0; selectStage--; }
 	selectStage = clamp(selectStage, 0, 1);
 	
 	if global.upPress { selected[selectStage]--; }

@@ -39,6 +39,7 @@ if state != playerStates.normal { exit; }
 
 image_blend = c_white;
 image_angle = 0;
+image_alpha = 1;
 
 spd = global.deny ? 2 : 1;
 

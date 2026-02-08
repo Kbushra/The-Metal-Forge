@@ -17,7 +17,8 @@ function draw_reset()
 
 function draw_list(_x, _y, gapY, selected, item1)
 {
-	for (var i = 0; i < argument_count - 4; i++)
+	draw_text(_x, _y, (selected == 0 ? "> " : "") + item1);
+	for (var i = 1; i < argument_count - 4; i++)
 	{
 		draw_text(_x, _y + gapY * i, (i == selected ? "> " : "") + argument[i + 4]);
 	}

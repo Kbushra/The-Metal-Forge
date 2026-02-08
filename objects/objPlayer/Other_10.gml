@@ -87,7 +87,7 @@ knock = function(xChange, yChange, intensity, dmg = 0)
 {
 	if state == playerStates.knockback { return; }
 	
-	objBarHealth.hp -= dmg;
+	objBarHealth.deal_damage(dmg);
 	
 	xstart = x;
 	ystart = y;

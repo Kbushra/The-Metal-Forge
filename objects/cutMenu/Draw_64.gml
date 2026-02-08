@@ -9,19 +9,6 @@ C/CTRL to show construction
 Q/E to move construction select
 ";
 
-var info = @"Kill as many metals as possible
-to make profit and get components like cogs.
-You start with some metal in the beginning
-so that you construct things to kill metal.
-
-After a sufficient amount of profit is made,
-you can break the beaker and leave the room.
-The limit's low but target for a high profit!
-
-Don't die or let the building collapse.
-If it gets close, best to start leaving.
-";
-
 if step == 3
 {
 	draw_set_alpha(titleEase);
@@ -47,18 +34,30 @@ if step == 4
 	draw_list(20, 120, 12, selected[0],
 	"Play",
 	"Audio",
-	"Info"
+	"Quit"
 	);
 	
-	if selected[0] == 0 { draw_text(80, 120, controls); }
-	else if selected[0] == 2 { draw_set_font(fntSmall); draw_text(80, 120, info); }
-	else
+	if selected[0] == 0
+	{
+		if selectStage == 0 { draw_text(80, 120, controls); }
+		else
+		{
+			var levels = [];
+			for (var i = 0; i < global.levelsUnlocked; i++) { array_push(levels, global.level[i].name); }
+		
+			script_execute_ext(draw_list, array_concat([80, 120, 12, selected[1]], levels));
+		}
+	}
+	
+	if selected[0] == 1
 	{
 		draw_list(80, 120, 12, selectStage == 0 ? -1 : selected[1],
 		$"SFX volume: {audio_emitter_get_gain(global.sfxEmitter)}",
 		$"BGM volume: {audio_emitter_get_gain(global.bgmEmitter)}"
 		);
 	}
+	
+	if selected[0] == 2 { draw_text(80, 120, "Your game will be saved."); }
 	
 	draw_reset();
 }

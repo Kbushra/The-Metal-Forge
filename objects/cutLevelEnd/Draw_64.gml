@@ -10,7 +10,7 @@ if animateTime < 1.5 { exit; }
 
 draw_set_halign(fa_middle);
 draw_set_colour(c_black);
-draw_text(GAME_WIDTH/2, 40, $"Level {global.currLevel + 1}\n{global.level[global.currLevel].name}");
+draw_text(GAME_WIDTH/2, 40, $"Level {currLevel}\n{global.level[currLevel].name}");
 
 if animateTime < 2.5 { draw_reset(); exit; }
 
@@ -38,23 +38,23 @@ if animateTime < 3.5 + 0.1*resourceNames.length { draw_reset(); exit; }
 if objBreakerPanel.image_index == 0
 {
 	draw_text(GAME_WIDTH/2 - 64 + 10, 90 + 10*count, $"RANK: DEAD");
-	draw_text_ext(GAME_WIDTH/2 - 64 + 10, 100 + 10*count, global.level[global.currLevel].comments[0], 10, 100);
+	draw_text_ext(GAME_WIDTH/2 - 64 + 10, 100 + 10*count, global.level[currLevel].comments[0], 10, 100);
 	exit;
 }
 
 var rankCount = 5; //S is excluded
 
 //S-Rank
-if objProfit.profit >= global.level[global.currLevel].ranks[rankCount - 1]
+if objProfit.profit >= global.level[currLevel].ranks[rankCount - 1]
 {
 	draw_text(GAME_WIDTH/2 - 64 + 10, 90 + 10*count, $"RANK: S");
-	draw_text_ext(GAME_WIDTH/2 - 64 + 10, 100 + 10*count, global.level[global.currLevel].comments[rankCount], 10, 100);
+	draw_text_ext(GAME_WIDTH/2 - 64 + 10, 100 + 10*count, global.level[currLevel].comments[rankCount], 10, 100);
 	exit;
 }
 
 for (var i = 0; i < rankCount; i++)
 {
-	if objProfit.profit >= global.level[global.currLevel].ranks[i] { continue; }
+	if objProfit.profit >= global.level[currLevel].ranks[i] { continue; }
 	
 	var rank = "F";
 	
@@ -68,8 +68,30 @@ for (var i = 0; i < rankCount; i++)
 	}
 	
 	draw_text(GAME_WIDTH/2 - 64 + 10, 90 + 10*count, $"RANK: {rank}");
-	draw_text_ext(GAME_WIDTH/2 - 64 + 10, 100 + 10*count, global.level[global.currLevel].comments[i], 10, 100);
+	draw_text_ext(GAME_WIDTH/2 - 64 + 10, 100 + 10*count, global.level[currLevel].comments[i], 10, 100);
 	break;
 }
 
+if animateTime < 5.5 + 0.1*resourceNames.length { draw_reset(); exit; }
+
+var options = ["Menu", "Restart"];
+if global.levelsUnlocked > currLevel + 1 { array_push(options, "Continue"); }
+script_execute_ext(draw_list, array_concat([GAME_WIDTH/2 - 64 + 10, 140 + 10*count, 10, selected], options));
+
 draw_reset();
+
+if instance_exists(cutTransition) { exit; }
+
+if global.downPress { selected++; }
+if global.upPress { selected--; }
+selected = (selected + array_length(options)) % array_length(options);
+
+if !global.confirm { exit; }
+
+if selected == 0 { room_transition(rmMenu); }
+if selected == 1 { room_transition(room); }
+if selected == 2
+{
+	room_transition(asset_get_index($"rmLevel{currLevel + 1}"));
+	global.currLevel++;
+}

@@ -1,3 +1,5 @@
+if !active { exit; }
+
 if objBreakerPanel.image_index == 1
 {
 	draw_set_colour(c_black);

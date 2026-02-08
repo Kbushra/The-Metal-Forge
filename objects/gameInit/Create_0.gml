@@ -13,6 +13,8 @@ global.bgmEmitter = audio_emitter_create();
 global.bgmBus = audio_bus_create();
 audio_emitter_bus(global.bgmEmitter, global.bgmBus);
 
+json_read();
+
 instance_create_depth(x, y, depth, gameControl);
 instance_create_depth(x, y, depth, objPlayer);
 
