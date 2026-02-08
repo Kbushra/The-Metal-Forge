@@ -1,5 +1,5 @@
 if objPlayer.state == playerStates.puppet { open = false; }
-else if global.construct { open = !open; }
+else if global.construct { open = !open; play_sfx(open ? sfxConstructionOpen : sfxConstructionClose); }
 
 if open { y = lerp(y, 0, 0.2); }
 else { y = lerp(y, -sprite_height, 0.2); }

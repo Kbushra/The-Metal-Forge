@@ -1,9 +1,11 @@
-function playSfx(sfx, gain = 1)
+function play_sfx(sfx, gain = 1, randomPitch = true)
 {
-	return audio_play_sound_on(global.sfxEmitter, sfx, false, 10, gain);
+	var snd = audio_play_sound_on(global.sfxEmitter, sfx, false, 10, gain);
+	if randomPitch { audio_sound_pitch(snd, random_range(0.9, 1.1)); }
+	return snd;
 }
 
-function playBgm(bgm, gain = 1)
+function play_bgm(bgm, gain = 1)
 {
 	if audio_sound_get_asset(global.bgm) == bgm
 	{

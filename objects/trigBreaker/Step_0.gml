@@ -20,6 +20,7 @@ if breaking
 if objPlayer.faceDirection != "U" || !place_meeting(x, y + 5, objPlayer) ||
 breaking || objBreakerPanel.image_index == 1 || !global.confirm { exit; }
 
+play_sfx(sfxPowerDown);
 breaking = true;
 
 with (objPlayer)

@@ -7,6 +7,8 @@ image_blend = merge_colour(prevBlend, #faacac, shake/5);
 x += irandom_range(-shake, shake);
 y += irandom_range(-shake, shake);
 
+audio_sound_gain(vibration, (1 - hp/maxHp) * shake/5);
+
 draw_self();
 
 x = prevX;

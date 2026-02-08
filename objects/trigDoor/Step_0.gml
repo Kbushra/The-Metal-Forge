@@ -4,7 +4,9 @@ if destRoom == noone || !animate { exit; }
 with (objPlayer)
 {
 	send_signal(id, "puppet", true);
-	if !in_bounds_strict(x, y) { exit; }
+	moving = in_bounds_strict(x, y);
+	
+	if !moving { exit; }
 	
 	if other.dir == HORIZONTAL { y += vsp * spd; }
 	if other.dir == VERTICAL { x += hsp * spd; }

@@ -7,11 +7,15 @@ if step == 0
 	objPlayer.x += 2;
 	objPlayer.sprite_index = sprPlayerRR;
 	objPlayer.image_speed = 1;
+	objPlayer.moving = true;
 	
 	if objPlayer.x >= 100 && !instance_exists(objVolt)
-	{ instance_create_depth(-32, 208, 0, objVolt, { origin: id }); }
+	{
+		instance_create_depth(-32, 208, 0, objVolt, { origin: id, ignorePuppeting: true });
+		play_sfx(sfxVoltCreate);
+	}
 	
-	if got_signal("electrocuted") { step++; }
+	if got_signal("electrocuted") { objPlayer.moving = false; step++; }
 }
 
 if step == 1
@@ -27,6 +31,8 @@ if step == 2
 {
 	if !done_action("spawn_metal")
 	{
+		play_sfx(sfxSmoke);
+		
 		for (var i = 0; i < 20; i++)
 		{
 			instance_create_depth(-32, irandom_range(112, 208), 0,
@@ -45,13 +51,24 @@ if step == 3
 	titleEase += 0.02;
 	
 	time--;
-	if time <= 0 { step++; titleEase = 0; }
+	if time <= 0
+	{
+		step++;
+		titleEase = 0;
+		
+		var effect = audio_effect_create(AudioEffectType.Gain);
+		global.sfxBus.effects[0] = effect;
+	}
 }
 
 if step < 4 { exit; }
 
 gameCamera.shake = 0;
 titleEase += 0.02;
+
+if !instance_exists(cutTransition)
+{ global.sfxBus.effects[0].gain = lerp(global.sfxBus.effects[0].gain, 0.3, 0.1); }
+else { global.sfxBus.effects[0] = undefined; }
 
 if selected[0] == 0 && selectStage == 1 && global.confirm && !instance_exists(cutTransition)
 {

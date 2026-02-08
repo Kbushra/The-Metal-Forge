@@ -7,6 +7,14 @@ else { state = playerStates.normal; }
 stop_signal("puppet");
 stop_signal("knockback");
 
+if global.deny || global.denyRelease { audio_stop_sound(sfxStep1); }
+
+if moving && !audio_is_playing(sfxStep1)
+{
+	var snd = play_sfx(sfxStep1);
+	if global.denyHeld { audio_sound_pitch(snd, audio_sound_get_pitch(snd) * 1.5); }
+}
+
 if state == playerStates.knockback
 {
 	var prevX = x;
@@ -41,7 +49,7 @@ image_blend = c_white;
 image_angle = 0;
 image_alpha = 1;
 
-spd = global.deny ? 2 : 1;
+spd = global.denyHeld ? 2 : 1;
 
 prevHsp = hsp;
 prevVsp = vsp;
@@ -59,4 +67,4 @@ update_direction();
 if image_speed != moving { image_index = moving; }
 image_speed = moving;
 
-sprite_index = asset_get_index($"sprPlayer{correct_horizontal_dir(faceDirection)}{global.deny && moving ? "R" : ""}");
+sprite_index = asset_get_index($"sprPlayer{correct_horizontal_dir(faceDirection)}{global.denyHeld && moving ? "R" : ""}");

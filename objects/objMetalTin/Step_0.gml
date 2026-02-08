@@ -20,6 +20,8 @@ if state == pathfinderStates.wander
 		image_index = 1;
 		xstart = x + wanderX * clamp(wanderDist, 0, 32);
 		ystart = y + wanderY * clamp(wanderDist, 0, 32);
+		
+		play_sfx(sfxStep2);
 	}
 	
 	image_xscale = x < xstart ? 1 : -1;
@@ -69,6 +71,7 @@ if !array_equals(moving, [false, false]) //Go to tile
 	exit;
 }
 
+play_sfx(sfxStep2);
 image_index = 1;
 
 var node = gamePathfinder.nodes[tileX][tileY];

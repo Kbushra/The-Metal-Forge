@@ -16,6 +16,7 @@ image_blend = valid ? c_green : c_red;
 
 if global.confirm && valid
 {
+	play_sfx(sfxBought);
 	instance_create_depth(x, y, depth, building.obj);
 	
 	for (var i = 0; i < array_length(building.resourceTypes); i++)

@@ -1,6 +1,8 @@
 animateTime = 0;
 selected = 0;
 
+clickCount = 0;
+
 currLevel = global.currLevel;
 
 if objBreakerPanel.image_index == 1 && objProfit.profit > global.level[currLevel].ranks[0] &&

@@ -1,3 +1,6 @@
+audio_stop_sound(vibration);
+play_sfx(sfxSmokeExplosion);
+
 var ps = part_system_create(psEnemy);
 part_particles_burst(ps, x, y, psEnemy);
 

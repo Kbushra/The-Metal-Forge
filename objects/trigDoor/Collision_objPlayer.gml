@@ -1,5 +1,5 @@
 if animate { exit; }
 
 animate = true;
-running = global.deny;
+running = global.denyHeld;
 alarm[0] = 60;

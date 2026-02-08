@@ -16,6 +16,8 @@ if attackIn
 		attackIn = false;
 		volt = instance_create_depth(x, y - 10, 0, objVolt,
 			{ xSpd: random_range(-5, 5), ySpd: random_range(-5, -2) });
+		
+		play_sfx(sfxVoltCreate);
 	}
 }
 
