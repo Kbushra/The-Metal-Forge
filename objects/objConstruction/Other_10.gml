@@ -18,6 +18,17 @@ can_place = function()
 	return canAfford && !reachedLimit;
 }
 
+global.buildings[buildingNames.pedestal] =
+{
+	icon: sprBuildingPedestal,
+	obj: objBuildingPedestal,
+	placer: objPlacerPedestal,
+	resourceTypes: [resourceNames.metal],
+	resourceQuantities: [10],
+	desc: "Helps sustain stability.",
+	count: 2
+};
+
 global.buildings[buildingNames.magnet] =
 {
 	icon: sprBuildingMagnet,
@@ -25,7 +36,7 @@ global.buildings[buildingNames.magnet] =
 	placer: objPlacerMagnet,
 	resourceTypes: [resourceNames.metal],
 	resourceQuantities: [5],
-	desc: "Tears metal apart within 1 tile",
+	desc: "Tears metal apart within 1 tile.",
 	count: 2
 };
 
@@ -35,7 +46,7 @@ global.buildings[buildingNames.magnetCoiled] =
 	obj: objBuildingMagnetCoiled,
 	placer: objPlacerMagnetCoiled,
 	resourceTypes: [resourceNames.metal, resourceNames.rod],
-	resourceQuantities: [8, 4],
-	desc: "Tears metal apart within 2 tiles",
+	resourceQuantities: [8, 8],
+	desc: "Tears metal apart at infinite distance on the NESW axis.",
 	count: 1
 };

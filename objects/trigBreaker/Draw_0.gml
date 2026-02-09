@@ -1,6 +1,6 @@
 if !active { exit; }
 
-if objBreakerPanel.image_index == 1
+if round_won()
 {
 	draw_set_colour(c_black);
 	draw_set_alpha(0.5);

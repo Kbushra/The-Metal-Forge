@@ -11,14 +11,14 @@ if breaking
 		objBreakerPanel.image_index = 1;
 		with (trigEnemySpawn) { alarm[0] = 0; } //No more spawning
 		with (parentMetal) { state = pathfinderStates.puppet; image_speed = 0; image_index = 0; }
-		with (trigDoor) { if destRoom != noone { solid = false; } }
+		with (trigDoor) { if escape { solid = false; } }
 	}
 	
 	if objPlayer.image_index >= 5 { breaking = false; }
 }
 
 if objPlayer.faceDirection != "U" || !place_meeting(x, y + 5, objPlayer) ||
-breaking || objBreakerPanel.image_index == 1 || !global.confirm { exit; }
+breaking || round_won() || !global.confirm { exit; }
 
 play_sfx(sfxPowerDown);
 breaking = true;

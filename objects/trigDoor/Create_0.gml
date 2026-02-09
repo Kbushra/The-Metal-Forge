@@ -1,4 +1,4 @@
-offset = destRoom == noone ? 0.5 : 0;
+offset = escape ? 0 : 0.5;
 
 animate = false;
 running = false;

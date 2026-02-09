@@ -3,6 +3,11 @@
 ///@func is_valid(x, y)
 is_valid = function(_x, _y)
 {
-	//Default
+	with (trigEnemySpawn)
+	{
+		if point_distance(x, y, _x, _y) <= 64 { return false; }
+		if near_equals(x, _x, 32) || near_equals(y, _y, 32) { return false; }
+	}
+	
 	return place_free(_x, _y) && !place_meeting(_x, _y, [trigEnemySpawn, parentMetal]);
 }

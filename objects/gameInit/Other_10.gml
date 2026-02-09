@@ -61,5 +61,5 @@ global.resource[resourceNames.quantum] =
 	obj: objResourceQuantum,
 	icon: sprResourceQuantum,
 	sell: 1006,
-	name: "Quantam energy"
+	name: "Quantam"
 }

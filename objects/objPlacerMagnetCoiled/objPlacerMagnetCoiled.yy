@@ -1,15 +1,17 @@
 {
   "$GMObject":"",
   "%Name":"objPlacerMagnetCoiled",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"objPlacerMagnetCoiled",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"parentPlacer","path":"objects/parentPlacer/parentPlacer.yy",},"propertyId":{"name":"building","path":"objects/parentPlacer/parentPlacer.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"global.buildings[buildingNames.magnetCoiled]",},
   ],
   "parent":{
-    "name":"Buildings",
-    "path":"folders/Construction/Buildings.yy",
+    "name":"Placers",
+    "path":"folders/Construction/Buildings/Placers.yy",
   },
   "parentObjectId":{
     "name":"parentPlacer",

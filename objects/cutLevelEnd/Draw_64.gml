@@ -42,40 +42,8 @@ if animateTime < 3.5 + 0.1*resourceNames.length { draw_reset(); exit; }
 
 if clickCount == 2 + count { play_sfx(sfxClick); clickCount++; }
 
-var rankCount = 5; //S is excluded
-
-if objBreakerPanel.image_index == 0 //Died
-{
-	draw_text(GAME_WIDTH/2 - 64 + 10, 90 + 10*count, $"RANK: DEAD");
-	draw_text_ext(GAME_WIDTH/2 - 64 + 10, 100 + 10*count, global.level[currLevel].comments[0], 10, 100);
-}
-else if objProfit.profit >= global.level[currLevel].ranks[rankCount - 1] //S-Rank
-{
-	draw_text(GAME_WIDTH/2 - 64 + 10, 90 + 10*count, $"RANK: S");
-	draw_text_ext(GAME_WIDTH/2 - 64 + 10, 100 + 10*count, global.level[currLevel].comments[rankCount], 10, 100);
-}
-else
-{
-	for (var i = 0; i < rankCount; i++)
-	{
-		if objProfit.profit >= global.level[currLevel].ranks[i] { continue; }
-	
-		var rank = "F";
-	
-		switch i
-		{
-			case 0: rank = "F"; break;
-			case 1: rank = "D"; break;
-			case 2: rank = "C"; break;
-			case 3: rank = "B"; break;
-			case 4: rank = "A"; break;
-		}
-	
-		draw_text(GAME_WIDTH/2 - 64 + 10, 90 + 10*count, $"RANK: {rank}");
-		draw_text_ext(GAME_WIDTH/2 - 64 + 10, 100 + 10*count, global.level[currLevel].comments[i], 10, 100);
-		break;
-	}
-}
+draw_text(GAME_WIDTH/2 - 64 + 10, 90 + 10*count, $"RANK: {rank}");
+draw_text_ext(GAME_WIDTH/2 - 64 + 10, 100 + 10*count, global.level[currLevel].comments[rank_to_num(rank)], 10, 100);
 
 if animateTime < 5.5 + 0.1*resourceNames.length { draw_reset(); exit; }
 

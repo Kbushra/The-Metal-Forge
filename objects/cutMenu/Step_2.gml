@@ -1,13 +1,12 @@
 send_signal(objPlayer, "puppet", true);
 
-if !window_has_focus() { exit; }
-
 if step == 0
 {
-	objPlayer.x += 2;
 	objPlayer.sprite_index = sprPlayerRR;
 	objPlayer.image_speed = 1;
 	objPlayer.moving = true;
+	
+	if window_has_focus() || instance_exists(objVolt) { objPlayer.x += 2; }
 	
 	if objPlayer.x >= 100 && !instance_exists(objVolt)
 	{

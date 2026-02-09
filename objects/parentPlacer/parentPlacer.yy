@@ -11,8 +11,8 @@
   "name":"parentPlacer",
   "overriddenProperties":[],
   "parent":{
-    "name":"Buildings",
-    "path":"folders/Construction/Buildings.yy",
+    "name":"Placers",
+    "path":"folders/Construction/Buildings/Placers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -1,4 +1,4 @@
-if objPlayer.state == playerStates.puppet { open = false; }
+if objPlayer.state == playerStates.puppet || round_won() { open = false; }
 else if global.construct { open = !open; play_sfx(open ? sfxConstructionOpen : sfxConstructionClose); }
 
 if open { y = lerp(y, 0, 0.2); }

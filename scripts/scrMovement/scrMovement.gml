@@ -47,6 +47,12 @@ function in_bounds_strict(_x, _y)
 		_y > sprite_yoffset - sprite_height && _y < room_height + sprite_height - sprite_yoffset;
 }
 
+function in_bounds_fully(_x, _y)
+{
+	return _x > sprite_xoffset && _x < room_width - sprite_xoffset &&
+		_y > sprite_yoffset && _y < room_height - sprite_yoffset;
+}
+
 function in_bounds_loose(_x, _y)
 { return _x > 0 && _x < room_width && _y > 0 && _y < room_height; }
 

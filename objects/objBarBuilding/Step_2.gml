@@ -1,3 +1,6 @@
+if instance_number(parentMetal) > 0 && objPlayer.state == playerStates.normal &&
+!round_won() { hp -= 0.005 * power(0.7, instance_number(objBuildingPedestal)); }
+
 if (hp > 0 || (objBarHealth.deathAnim && !deathAnim)) { exit; }
 deathAnim = true;
 

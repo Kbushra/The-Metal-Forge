@@ -1,1 +1,1 @@
-instance_create_depth(0, 0, 0, cutLevelEnd, { destRoom });
+instance_create_depth(0, 0, 0, cutLevelEnd);

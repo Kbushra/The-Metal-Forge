@@ -47,6 +47,7 @@ enum enemyNames
 
 enum buildingNames
 {
+	pedestal,
 	magnet,
 	magnetCoiled,
 	

@@ -20,7 +20,7 @@ global.level[0] =
 global.level[1] = 
 {
 	name: "The Hall",
-	ranks: [2500, 4000, 6500, 9000, 12000],
+	ranks: [5000, 6500, 8000, 11000, 14000],
 	comments:
 	[
 		"First room and you're already failing?",

@@ -43,7 +43,12 @@ if step == 4
 		else
 		{
 			var levels = [];
-			for (var i = 0; i < global.levelsUnlocked; i++) { array_push(levels, global.level[i].name); }
+			for (var i = 0; i < global.levelsUnlocked; i++)
+			{
+				array_push(levels, global.level[i].name +
+					(global.levelRanks[i] != "" ?
+						$" - RANK {global.levelRanks[i]}, SCORE {global.levelScores[i]}" : ""));
+			}
 		
 			script_execute_ext(draw_list, array_concat([80, 120, 12, selected[1]], levels));
 		}

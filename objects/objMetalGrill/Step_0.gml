@@ -31,11 +31,11 @@ if attackOut
 		{
 			morphTimer--;
 			
-			if instance_exists(volt) && in_bounds_loose(volt.x, volt.y) &&
-			place_free(volt.x, volt.y) && !tp && morphTimer <= 10
+			if instance_exists(volt) && in_bounds_fully(volt.x, volt.y) &&
+			place_free(volt.x, volt.y + sprite_height/2) && !tp && morphTimer <= 10
 			{
 				targX = volt.x;
-				targY = volt.y + sprite_yoffset/2;
+				targY = volt.y + sprite_height/2;
 				tp = true;
 			}
 			

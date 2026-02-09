@@ -1,5 +1,5 @@
 offset = lerp(offset, solid ? 0 : 0.5, 0.1);
-if destRoom == noone || !animate { exit; }
+if !escape || !animate { exit; }
 
 with (objPlayer)
 {

@@ -1,13 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"objPlacerMagnet",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"objPlacerPedestal",
+  "eventList":[],
   "managed":true,
-  "name":"objPlacerMagnet",
+  "name":"objPlacerPedestal",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"parentPlacer","path":"objects/parentPlacer/parentPlacer.yy",},"propertyId":{"name":"building","path":"objects/parentPlacer/parentPlacer.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"global.buildings[buildingNames.magnet]",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"parentPlacer","path":"objects/parentPlacer/parentPlacer.yy",},"propertyId":{"name":"building","path":"objects/parentPlacer/parentPlacer.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"global.buildings[buildingNames.pedestal]",},
   ],
   "parent":{
     "name":"Placers",
@@ -35,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprBuildingMagnet",
-    "path":"sprites/sprBuildingMagnet/sprBuildingMagnet.yy",
+    "name":"sprBuildingPedestal",
+    "path":"sprites/sprBuildingPedestal/sprBuildingPedestal.yy",
   },
   "spriteMaskId":null,
   "visible":true,
