@@ -1,11 +1,11 @@
 move_selection = function()
 {
-	if global.confirm { selectStage++; }
-	if global.deny { selected[1] = 0; selectStage--; }
+	if global.confirm { selectStage++; play_sfx(sfxClickSelect); }
+	if global.deny { selected[1] = 0; selectStage--; play_sfx(sfxClickSelect); }
 	selectStage = clamp(selectStage, 0, 1);
 	
-	if global.upPress { selected[selectStage]--; }
-	if global.downPress { selected[selectStage]++; }
+	if global.upPress { selected[selectStage]--; play_sfx(sfxClickMove); }
+	if global.downPress { selected[selectStage]++; play_sfx(sfxClickMove); }
 	
 	var len = selectStage == 0 ? 3 : selectLen[selected[0]];
 	selected[selectStage] = (selected[selectStage] + len) % len;

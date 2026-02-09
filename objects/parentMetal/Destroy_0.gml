@@ -1,8 +1,8 @@
 audio_stop_sound(vibration);
 play_sfx(sfxSmokeExplosion);
 
-var ps = part_system_create(psEnemy);
-part_particles_burst(ps, x, y, psEnemy);
+var ps = part_system_create(psSmoke);
+part_particles_burst(ps, x, y, psSmoke);
 
 for (var i = 0; i < array_length(global.enemy[ind].resourceTypes); i++)
 {

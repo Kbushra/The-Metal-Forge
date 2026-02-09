@@ -5,8 +5,12 @@ if step == 0
 	offset = exponential_in(GAME_HEIGHT/2, 0, time, 3);
 	time += 0.05;
 	
+	if time >= 1 && !done_action("clank_in") { play_sfx(sfxClank); }
+	
 	if time >= 2
 	{
+		play_sfx(sfxClank); //Clank out
+		
 		step++;
 		time = 0;
 		room_goto(destRoom);

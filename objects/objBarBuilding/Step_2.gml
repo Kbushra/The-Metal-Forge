@@ -1,6 +1,8 @@
 if (hp > 0 || (objBarHealth.deathAnim && !deathAnim)) { exit; }
 deathAnim = true;
 
+if !done_action("play_sfx") { play_sfx(sfxRumbleShort); }
+
 with (objPlayer)
 {
 	send_signal(id, "puppet", true);

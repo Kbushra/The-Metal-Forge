@@ -1,1 +1,0 @@
-if killerRock { instance_destroy(other.ghost); }

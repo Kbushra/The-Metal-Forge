@@ -1,0 +1,1 @@
+deathAnim = false;

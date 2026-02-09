@@ -5,7 +5,7 @@ image_speed = 0;
 
 play_sfx(sfxSmoke);
 
-part_particles_burst(spawnPs, x, y, psEnemy);
+part_particles_burst(spawnPs, x, y, psSmoke);
 
 var chance = random(1);
 var counter = 0;

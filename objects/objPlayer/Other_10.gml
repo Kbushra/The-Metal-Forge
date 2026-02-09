@@ -85,9 +85,10 @@ update_direction = function()
 ///@func knock(xChange, yChange, intensity, [dmg])
 knock = function(xChange, yChange, intensity, dmg = 0)
 {
-	if state == playerStates.knockback { return; }
+	if state != playerStates.normal { return; }
 	
 	objBarHealth.deal_damage(dmg);
+	play_sfx(sfxDamage);
 	
 	xstart = x;
 	ystart = y;

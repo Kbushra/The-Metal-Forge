@@ -16,8 +16,6 @@ draw_text(GAME_WIDTH/2, 40, $"Level {currLevel}\n{global.level[currLevel].name}"
 
 if animateTime < 2.5 { draw_reset(); exit; }
 
-if clickCount == 1 { play_sfx(sfxClick); clickCount++; }
-
 draw_set_halign(fa_left);
 
 var count = 0;
@@ -30,17 +28,19 @@ for (var i = 0; i < resourceNames.length; i++)
 		$"{global.resourceCount[i]}x{global.resource[i].name} - ${global.resource[i].sell * global.resourceCount[i]}");
 	
 	count++;
+	
+	if clickCount == count { play_sfx(sfxClick); clickCount++; }
 }
 
 if animateTime < 2.5 + 0.1*resourceNames.length { draw_reset(); exit; }
 
-if clickCount == 2 { play_sfx(sfxClick); clickCount++; }
+if clickCount == 1 + count { play_sfx(sfxClick); clickCount++; }
 
 draw_text(GAME_WIDTH/2 - 64 + 10, 70 + 10*count, $"TOTAL: ${objProfit.profit}");
 
 if animateTime < 3.5 + 0.1*resourceNames.length { draw_reset(); exit; }
 
-if clickCount == 3 { play_sfx(sfxClick); clickCount++; }
+if clickCount == 2 + count { play_sfx(sfxClick); clickCount++; }
 
 var rankCount = 5; //S is excluded
 
@@ -79,7 +79,7 @@ else
 
 if animateTime < 5.5 + 0.1*resourceNames.length { draw_reset(); exit; }
 
-if clickCount == 4 { play_sfx(sfxClick); clickCount++; }
+if clickCount == 3 + count { play_sfx(sfxClick); clickCount++; }
 
 var options = ["Menu", "Restart"];
 if global.levelsUnlocked > currLevel + 1 { array_push(options, "Continue"); }
@@ -89,11 +89,13 @@ draw_reset();
 
 if instance_exists(cutTransition) { exit; }
 
-if global.downPress { selected++; }
-if global.upPress { selected--; }
+if global.downPress { selected++; play_sfx(sfxClickMove); }
+if global.upPress { selected--; play_sfx(sfxClickMove); }
 selected = (selected + array_length(options)) % array_length(options);
 
 if !global.confirm { exit; }
+
+play_sfx(sfxClickSelect);
 
 if selected == 0 { room_transition(rmMenu); }
 if selected == 1 { room_transition(room); }

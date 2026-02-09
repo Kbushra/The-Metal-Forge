@@ -6,9 +6,8 @@ else { y = lerp(y, -sprite_height, 0.2); }
 
 if !open { instance_destroy(parentPlacer); exit; }
 
-if global.constructRight { selected++; }
-if global.constructLeft { selected--; }
-selected = clamp(selected, 0, array_length(availableBuildings) - 1);
+if global.constructRight && selected < array_length(availableBuildings) - 1 { selected++; play_sfx(sfxClickMove); }
+if global.constructLeft && selected > 0 { selected--; play_sfx(sfxClickMove); }
 
 if can_place() && !instance_exists(availableBuildings[selected].placer)
 {
