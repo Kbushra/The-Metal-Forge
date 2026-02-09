@@ -30,6 +30,8 @@
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"enemyTypes","filters":[],"listItems":[],"multiselect":false,"name":"enemyTypes","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"[]","varType":4,},
     {"$GMObjectProperty":"v2","%Name":"enemyProbabilities","filters":[],"listItems":[],"multiselect":false,"name":"enemyProbabilities","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"[]","varType":4,},
+    {"$GMObjectProperty":"v2","%Name":"delayMult","filters":[],"listItems":[],"multiselect":false,"name":"delayMult","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1.0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"swarmChance","filters":[],"listItems":[],"multiselect":false,"name":"swarmChance","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.3","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

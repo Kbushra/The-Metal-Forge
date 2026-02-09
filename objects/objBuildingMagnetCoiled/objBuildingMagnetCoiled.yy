@@ -14,8 +14,8 @@
     "path":"folders/Construction/Buildings.yy",
   },
   "parentObjectId":{
-    "name":"objBuildingMagnet",
-    "path":"objects/objBuildingMagnet/objBuildingMagnet.yy",
+    "name":"parentBuilding",
+    "path":"objects/parentBuilding/parentBuilding.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

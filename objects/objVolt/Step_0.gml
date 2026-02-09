@@ -4,6 +4,12 @@ image_angle += 20;
 
 if !in_bounds_strict(x, y) && alarm[0] <= 0 { alarm[0] = 120; exit; }
 
+if alarm[1] <= 0
+{
+	image_alpha -= 0.05;
+	if image_alpha <= 0 { instance_destroy(); }
+}
+
 if electrocuteTimer > 0
 {
 	objPlayer.sprite_index = sprPlayerElectrocute;

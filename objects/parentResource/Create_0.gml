@@ -6,3 +6,5 @@ y += vsp * 2;
 
 bouncing = true;
 alarm[0] = 120;
+
+ghost = instance_create_depth(0, 0, 0, objGhost, { origin: id });

@@ -6,7 +6,7 @@
 #macro NONE -1
 
 #macro RAND_WANDER (irandom_range(120, 180))
-#macro RAND_ENEMYSPAWN (irandom_range(360, 540)/2)
+#macro RAND_ENEMYSPAWN (irandom_range(360, 540))
 
 #macro print show_debug_message
 
