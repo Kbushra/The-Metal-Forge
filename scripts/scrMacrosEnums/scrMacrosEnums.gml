@@ -51,6 +51,7 @@ enum buildingNames
 	pedestal,
 	magnet,
 	magnetCoiled,
+	ioniser,
 	
 	length
 }

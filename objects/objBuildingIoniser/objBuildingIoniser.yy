@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"objBuildingPedestal",
+  "%Name":"objBuildingIoniser",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objBuildingPedestal",
+  "name":"objBuildingIoniser",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"parentBuilding","path":"objects/parentBuilding/parentBuilding.yy",},"propertyId":{"name":"ind","path":"objects/parentBuilding/parentBuilding.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"buildingNames.pedestal",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"parentBuilding","path":"objects/parentBuilding/parentBuilding.yy",},"propertyId":{"name":"ind","path":"objects/parentBuilding/parentBuilding.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"buildingNames.ioniser",},
   ],
   "parent":{
     "name":"Buildings",
@@ -35,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"sprBuildingPedestal",
-    "path":"sprites/sprBuildingPedestal/sprBuildingPedestal.yy",
+    "name":"sprBuildingIoniser",
+    "path":"sprites/sprBuildingIoniser/sprBuildingIoniser.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,22 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"objBuildingPedestal",
+  "%Name":"objAcidContainer",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objBuildingPedestal",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"parentBuilding","path":"objects/parentBuilding/parentBuilding.yy",},"propertyId":{"name":"ind","path":"objects/parentBuilding/parentBuilding.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"buildingNames.pedestal",},
-  ],
+  "name":"objAcidContainer",
+  "overriddenProperties":[],
   "parent":{
-    "name":"Buildings",
-    "path":"folders/Construction/Buildings.yy",
+    "name":"The Metal Forge",
+    "path":"The Metal Forge.yyp",
   },
-  "parentObjectId":{
-    "name":"parentBuilding",
-    "path":"objects/parentBuilding/parentBuilding.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -35,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"sprBuildingPedestal",
-    "path":"sprites/sprBuildingPedestal/sprBuildingPedestal.yy",
+    "name":"sprAcidContainer",
+    "path":"sprites/sprAcidContainer/sprAcidContainer.yy",
   },
   "spriteMaskId":null,
   "visible":true,

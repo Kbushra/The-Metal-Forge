@@ -14,3 +14,5 @@ draw_self();
 x = prevX;
 y = prevY;
 image_blend = prevBlend;
+
+shake = lerp(shake, 0, 0.1);

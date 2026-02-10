@@ -50,3 +50,14 @@ global.buildings[buildingNames.magnetCoiled] =
 	desc: "Tears metal apart at infinite distance on the NESW axis.",
 	count: 1
 };
+
+global.buildings[buildingNames.ioniser] =
+{
+	icon: sprBuildingIoniser,
+	obj: objBuildingIoniser,
+	placer: objPlacerIoniser,
+	resourceTypes: [resourceNames.metal, resourceNames.alpha],
+	resourceQuantities: [6, 10],
+	desc: "Constantly shoots radiation at enemies.",
+	count: 3
+};
