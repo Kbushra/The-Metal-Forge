@@ -45,7 +45,7 @@ setup_wander = function()
 			false, true) != noone
 			{
 				if j < interruptDist { collided = true; }
-				else { wanderDist = j - gamePathfinder.tileSize; }
+				else { wanderDist = clamp(j - gamePathfinder.tileSize, 0, interruptDist); }
 				break;
 			}
 		}

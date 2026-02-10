@@ -6,6 +6,7 @@ for (var i = 0; i < room_width/tileSize - 0.5; i++)
 	{
 		if point_distance(sourceTileX, sourceTileY, i, j) > maxDistance { continue; }
 		
+		if array_length(nodes) <= i || array_length(nodes[i]) <= j { reset_nodes(); }
 		var node = nodes[i][j];
 		
 		if node.weight == NONE { draw_set_colour(c_black); draw_set_alpha(1); }

@@ -9,17 +9,17 @@
   "managed":true,
   "name":"objBarBuilding",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objBar","path":"objects/objBar/objBar.yy",},"propertyId":{"name":"bg","path":"objects/objBar/objBar.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FF660000",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objBar","path":"objects/objBar/objBar.yy",},"propertyId":{"name":"fg","path":"objects/objBar/objBar.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FFD1A208",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"objBar","path":"objects/objBar/objBar.yy",},"propertyId":{"name":"name","path":"objects/objBar/objBar.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"STABILITY",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"parentBar","path":"objects/parentBar/parentBar.yy",},"propertyId":{"name":"bg","path":"objects/parentBar/parentBar.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FF660000",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"parentBar","path":"objects/parentBar/parentBar.yy",},"propertyId":{"name":"fg","path":"objects/parentBar/parentBar.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FFD1A208",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"parentBar","path":"objects/parentBar/parentBar.yy",},"propertyId":{"name":"name","path":"objects/parentBar/parentBar.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"STABILITY",},
   ],
   "parent":{
     "name":"UI",
     "path":"folders/UI.yy",
   },
   "parentObjectId":{
-    "name":"objBar",
-    "path":"objects/objBar/objBar.yy",
+    "name":"parentBar",
+    "path":"objects/parentBar/parentBar.yy",
   },
   "persistent":true,
   "physicsAngularDamping":0.1,

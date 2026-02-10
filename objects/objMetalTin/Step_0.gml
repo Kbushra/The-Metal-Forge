@@ -16,6 +16,7 @@ if state == pathfinderStates.wander
 	{
 		wanderX = 0;
 		wanderY = 0;
+		wanderDist = 32;
 		setup_wander();
 		image_index = 1;
 		xstart = x + wanderX * clamp(wanderDist, 0, 32);
@@ -25,8 +26,8 @@ if state == pathfinderStates.wander
 	}
 	
 	image_xscale = x < xstart ? 1 : -1;
-	x = lerp(x, xstart, 0.1);
-	y = lerp(y, ystart, 0.1);
+	x = lerp(x, xstart, spd);
+	y = lerp(y, ystart, spd);
 	wanderDist--;
 	if wanderDist > 0
 	{
@@ -64,8 +65,8 @@ if !array_equals(moving, [false, false]) //Go to tile
 	}
 	
 	image_xscale = x < next[0] ? 1 : -1;
-	x = lerp(x, next[0], 0.1);
-	y = lerp(y, next[1], 0.1);
+	x = lerp(x, next[0], spd);
+	y = lerp(y, next[1], spd);
 	moving = [!near_equals(x, next[0], 2), !near_equals(y, next[1], 2)];
 	image_speed = image_index >= 1;
 	exit;

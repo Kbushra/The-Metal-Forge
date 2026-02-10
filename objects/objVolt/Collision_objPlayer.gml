@@ -1,7 +1,8 @@
-if (electrocuteTimer > 0 || (objPlayer.state == playerStates.puppet && !ignorePuppeting)) { exit; }
+if (zapping || objPlayer.state == playerStates.knockback || (objPlayer.state == playerStates.puppet && !ignorePuppeting)) { exit; }
 
-if other.state != playerStates.puppet { other.knock(1, 1, 5, dmg); }
+if other.state == playerStates.normal { other.knock(choose(-1, 1), choose(-1, 0, 1), 32, dmg); }
 
 play_sfx(sfxZap);
-electrocuteTimer = timerLen;
 if origin != noone { send_signal(origin, "electrocuted", true); }
+
+zapping = true;

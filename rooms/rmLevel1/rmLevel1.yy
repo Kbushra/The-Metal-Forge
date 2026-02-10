@@ -22,6 +22,7 @@
     {"name":"inst_453AE927","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"inst_44272C2","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"inst_3A3A85BA","path":"rooms/rmLevel1/rmLevel1.yy",},
+    {"name":"inst_1D0DCF0","path":"rooms/rmLevel1/rmLevel1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -43,9 +44,13 @@
         {"$GMRInstance":"v4","%Name":"inst_44272C2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_44272C2","objectId":{"name":"trigSpawn","path":"objects/trigSpawn/trigSpawn.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"trigSpawn","path":"objects/trigSpawn/trigSpawn.yy",},"propertyId":{"name":"dir","path":"objects/trigSpawn/trigSpawn.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"U\"",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":352.0,"y":304.0,},
-        {"$GMRInstance":"v4","%Name":"inst_3A3A85BA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3A3A85BA","objectId":{"name":"trigEnemySpawn","path":"objects/trigEnemySpawn/trigEnemySpawn.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"trigEnemySpawn","path":"objects/trigEnemySpawn/trigEnemySpawn.yy",},"propertyId":{"name":"enemyTypes","path":"objects/trigEnemySpawn/trigEnemySpawn.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"[resourceNames.metal, enemyNames.conveyor, enemyNames.grill]",},
+        {"$GMRInstance":"v4","%Name":"inst_3A3A85BA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":true,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3A3A85BA","objectId":{"name":"trigEnemySpawn","path":"objects/trigEnemySpawn/trigEnemySpawn.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"trigEnemySpawn","path":"objects/trigEnemySpawn/trigEnemySpawn.yy",},"propertyId":{"name":"enemyTypes","path":"objects/trigEnemySpawn/trigEnemySpawn.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"[enemyNames.tin, enemyNames.conveyor, enemyNames.grill]",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"trigEnemySpawn","path":"objects/trigEnemySpawn/trigEnemySpawn.yy",},"propertyId":{"name":"enemyProbabilities","path":"objects/trigEnemySpawn/trigEnemySpawn.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"[0.2, 0.5, 0.3]",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":256.0,"y":208.0,},
+        {"$GMRInstance":"v4","%Name":"inst_1D0DCF0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1D0DCF0","objectId":{"name":"trigEnemySpawn","path":"objects/trigEnemySpawn/trigEnemySpawn.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"trigEnemySpawn","path":"objects/trigEnemySpawn/trigEnemySpawn.yy",},"propertyId":{"name":"enemyTypes","path":"objects/trigEnemySpawn/trigEnemySpawn.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"[enemyNames.tin]",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"trigEnemySpawn","path":"objects/trigEnemySpawn/trigEnemySpawn.yy",},"propertyId":{"name":"enemyProbabilities","path":"objects/trigEnemySpawn/trigEnemySpawn.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"[1]",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":256.0,"y":208.0,},
       ],"layers":[],"name":"Triggers","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[

@@ -1,2 +1,2 @@
-electrocuteTimer = 0;
+zapping = false;
 alarm[1] = 60;

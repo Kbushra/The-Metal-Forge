@@ -15,9 +15,16 @@ if step == 0
 		time = 0;
 		room_goto(destRoom);
 		
+		objPlayer.spawn_in();
+		
 		for (var i = 0; i < resourceNames.length; i++) { global.resourceCount[i] = 0; }
-		objBarHealth.hp = 100;
-		objBarBuilding.hp = 100;
+		
+		with (parentBar)
+		{
+			hp = maxHp;
+			shownHp = maxHp;
+			highlight = 1;
+		}
 	}
 }
 

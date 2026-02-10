@@ -106,3 +106,17 @@ freeze = function()
 	image_index = 0;
 	image_blend = merge_colour(image_blend, c_white, 0.1);
 }
+
+///@func spawn_in()
+spawn_in = function()
+{
+	if !assert(instance_number(trigSpawn) == 1, "Invalid spawn!") { exit; }
+
+	send_signal(gameCamera, "snap", true);
+	x = trigSpawn.x;
+	y = trigSpawn.y;
+	stillDirection = trigSpawn.dir;
+	state = playerStates.normal;
+	
+	stop_signal("spawn");
+}
