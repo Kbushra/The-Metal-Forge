@@ -5,6 +5,8 @@ if step == 0
 	objPlayer.sprite_index = sprPlayerRR;
 	objPlayer.image_speed = 1;
 	objPlayer.moving = true;
+	objPlayer.faceDirection = "R";
+	objPlayer.stillDirection = "R";
 	
 	if window_has_focus() || instance_exists(objVolt) { objPlayer.x += 2; }
 	

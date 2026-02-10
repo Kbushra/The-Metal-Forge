@@ -15,6 +15,13 @@ audio_emitter_bus(global.bgmEmitter, global.bgmBus);
 
 json_read();
 
+if global.completed && global.levelsUnlocked < array_length(global.level)
+{
+	global.levelsUnlocked++;
+	global.completed = false;
+	json_write();
+}
+
 instance_create_depth(x, y, depth, gameControl);
 instance_create_depth(x, y, depth, objPlayer);
 

@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"sprReceipt",
   "bboxMode":0,
-  "bbox_bottom":207,
+  "bbox_bottom":303,
   "bbox_left":0,
   "bbox_right":135,
   "bbox_top":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":208,
+  "height":304,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"081b0543-b237-4188-977b-5b187a7fa971","blendMode":0,"displayName":"default","isLocked":false,"name":"081b0543-b237-4188-977b-5b187a7fa971","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},

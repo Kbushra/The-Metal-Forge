@@ -41,6 +41,7 @@ enum enemyNames
 	tin,
 	conveyor,
 	grill,
+	radiator,
 	
 	length
 }
@@ -61,6 +62,7 @@ enum resourceNames
 	rod,
 	battery,
 	quantum,
+	alpha,
 	
 	length
 }

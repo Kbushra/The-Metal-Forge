@@ -12,7 +12,7 @@ if clickCount == 0 { play_sfx(sfxClick); clickCount++; }
 
 draw_set_halign(fa_middle);
 draw_set_colour(c_black);
-draw_text(GAME_WIDTH/2, 40, $"Level {currLevel}\n{global.level[currLevel].name}");
+draw_text(GAME_WIDTH/2, 30, $"Level {currLevel}\n{global.level[currLevel].name}");
 
 if animateTime < 2.5 { draw_reset(); exit; }
 
@@ -24,7 +24,7 @@ for (var i = 0; i < resourceNames.length; i++)
 	if global.resourceCount[i] == 0 { continue; }
 	if animateTime < 2.5 + 0.1*i { break; }
 	
-	draw_text(GAME_WIDTH/2 - 64 + 10, 70 + 10*count,
+	draw_text(GAME_WIDTH/2 - 64 + 10, 60 + 10*count,
 		$"{global.resourceCount[i]}x{global.resource[i].name} - ${global.resource[i].sell * global.resourceCount[i]}");
 	
 	count++;
@@ -36,14 +36,14 @@ if animateTime < 2.5 + 0.1*resourceNames.length { draw_reset(); exit; }
 
 if clickCount == 1 + count { play_sfx(sfxClick); clickCount++; }
 
-draw_text(GAME_WIDTH/2 - 64 + 10, 70 + 10*count, $"TOTAL: ${objProfit.profit}");
+draw_text(GAME_WIDTH/2 - 64 + 10, 60 + 10*count, $"TOTAL: ${objProfit.profit}");
 
 if animateTime < 3.5 + 0.1*resourceNames.length { draw_reset(); exit; }
 
 if clickCount == 2 + count { play_sfx(sfxClick); clickCount++; }
 
-draw_text(GAME_WIDTH/2 - 64 + 10, 90 + 10*count, $"RANK: {rank}");
-draw_text_ext(GAME_WIDTH/2 - 64 + 10, 100 + 10*count, global.level[currLevel].comments[rank_to_num(rank)], 10, 100);
+draw_text(GAME_WIDTH/2 - 64 + 10, 80 + 10*count, $"RANK: {rank}");
+draw_text_ext(GAME_WIDTH/2 - 64 + 10, 90 + 10*count, global.level[currLevel].comments[rank_to_num(rank)], 10, 100);
 
 if animateTime < 5.5 + 0.1*resourceNames.length { draw_reset(); exit; }
 
@@ -51,7 +51,7 @@ if clickCount == 3 + count { play_sfx(sfxClick); clickCount++; }
 
 var options = ["Menu", "Restart"];
 if global.levelsUnlocked > currLevel + 1 { array_push(options, "Continue"); }
-script_execute_ext(draw_list, array_concat([GAME_WIDTH/2 - 64 + 10, 140 + 10*count, 10, selected], options));
+script_execute_ext(draw_list, array_concat([GAME_WIDTH/2 - 64 + 10, GAME_HEIGHT/2 + 74, 10, selected], options));
 
 draw_reset();
 

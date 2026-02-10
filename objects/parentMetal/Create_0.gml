@@ -5,5 +5,6 @@ maxHp = 100;
 state = pathfinderStates.wander;
 
 vibration = play_sfx(sfxVibrate, 0);
+audio_sound_loop(vibration, true);
 
 ghost = instance_create_depth(x, y, depth, objGhost, { origin: id });

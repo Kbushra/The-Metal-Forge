@@ -31,3 +31,18 @@ global.level[1] =
 		"Blazing rich start!"
 	]
 };
+
+global.level[2] = 
+{
+	name: "Acid Gen",
+	ranks: [5000, 6500, 8000, 11000, 14000],
+	comments:
+	[
+		"Let it get in your skin?",
+		"You're leaving all of that acidic profit behind!",
+		"I'd never be trusted with this equipment...",
+		"Not a single person? Luckily, I can reap the benefits.",
+		"Teachers wish for this income per hour.",
+		"Blazing rich start!"
+	]
+};

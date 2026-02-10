@@ -21,7 +21,15 @@ global.enemy[enemyNames.grill] =
 	obj: objMetalGrill,
 	resourceTypes: [resourceNames.metal, resourceNames.rod, resourceNames.quantum],
 	resourceQuantities: [2, 3, 1],
-	resourceProbabilities: [1, 0.7, 0.1]
+	resourceProbabilities: [1, 0.8, 0.1]
+}
+
+global.enemy[enemyNames.radiator] =
+{
+	obj: objMetalRadiator,
+	resourceTypes: [resourceNames.metal, resourceNames.alpha, resourceNames.battery],
+	resourceQuantities: [4, 2, 2],
+	resourceProbabilities: [1, 0.9, 0.2]
 }
 
 global.resource[resourceNames.metal] =
@@ -62,4 +70,12 @@ global.resource[resourceNames.quantum] =
 	icon: sprResourceQuantum,
 	sell: 1006,
 	name: "Quantam"
+}
+
+global.resource[resourceNames.alpha] =
+{
+	obj: objResourceAlpha,
+	icon: sprResourceAlpha,
+	sell: 286,
+	name: "Alpha"
 }

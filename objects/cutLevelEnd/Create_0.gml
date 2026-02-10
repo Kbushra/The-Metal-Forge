@@ -32,8 +32,11 @@ else
 if round_won()
 {
 	if objProfit.profit > global.level[currLevel].ranks[0] &&
-	global.levelsUnlocked == currLevel + 1 && global.levelsUnlocked < array_length(global.level)
-	{ global.levelsUnlocked++; }
+	global.levelsUnlocked == currLevel + 1
+	{
+		if global.levelsUnlocked < array_length(global.level) { global.levelsUnlocked++; }
+		else { global.completed = true; }
+	}
 	
 	if rank_to_num(rank) > rank_to_num(global.levelRanks[currLevel])
 	{ global.levelRanks[currLevel] = rank; }

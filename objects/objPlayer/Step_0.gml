@@ -7,7 +7,7 @@ else { state = playerStates.normal; }
 stop_signal("puppet");
 stop_signal("knockback");
 
-if global.deny || global.denyRelease { audio_stop_sound(sfxStep1); }
+if !moving || global.deny || global.denyRelease { audio_stop_sound(sfxStep1); }
 
 if moving && !audio_is_playing(sfxStep1)
 {
