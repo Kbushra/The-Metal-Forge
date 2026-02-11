@@ -1,4 +1,4 @@
-depth = -999;
+depth = -bbox_bottom;
 
 if round_won()
 {
