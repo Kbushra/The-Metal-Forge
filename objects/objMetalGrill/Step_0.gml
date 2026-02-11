@@ -8,14 +8,14 @@ if attackIn
 {
 	image_yscale = lerp(image_yscale, 0.5, 0.2);
 	
-	if near_equals(image_yscale, 0.5, 0.05)
+	if near_equals(image_yscale, 0.5, 0.02)
 	{
 		image_index = 0;
 		image_speed = 0;
 		attackOut = true;
 		attackIn = false;
 		volt = instance_create_depth(x, y - 10, 0, objVolt,
-			{ xSpd: random_range(-5, 5), ySpd: random_range(-5, -2) });
+			{ xSpd: random_range(-3, 3), ySpd: random_range(-4, -2) });
 		
 		play_sfx(sfxVoltCreate);
 	}

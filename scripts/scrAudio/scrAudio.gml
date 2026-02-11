@@ -1,8 +1,6 @@
-function play_sfx(sfx, gain = 1, randomPitch = true)
+function play_sfx(sfx, gain = 1, pitch = random_range(0.9, 1.1), loop = false)
 {
-	var snd = audio_play_sound_on(global.sfxEmitter, sfx, false, 10, gain);
-	if randomPitch { audio_sound_pitch(snd, random_range(0.9, 1.1)); }
-	return snd;
+	return audio_play_sound_on(global.sfxEmitter, sfx, loop, 10, gain, , pitch);
 }
 
 function play_bgm(bgm, gain = 1)

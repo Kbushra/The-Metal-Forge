@@ -1,4 +1,4 @@
 other.hp -= 30;
-if other.shake < 4 { other.shake = 4; }
+set_shake(4, other.id);
 
 instance_destroy();

@@ -19,4 +19,4 @@ if collapseTimer <= 0 && instance_number(objRock) < 3
 	collapseTimer = 30;
 }
 
-gameCamera.shake = 1;
+set_shake(1, gameCamera);

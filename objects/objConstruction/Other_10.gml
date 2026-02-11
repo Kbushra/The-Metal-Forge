@@ -56,8 +56,19 @@ global.buildings[buildingNames.ioniser] =
 	icon: sprBuildingIoniser,
 	obj: objBuildingIoniser,
 	placer: objPlacerIoniser,
-	resourceTypes: [resourceNames.metal, resourceNames.alpha],
-	resourceQuantities: [6, 10],
+	resourceTypes: [resourceNames.metal, resourceNames.rod, resourceNames.alpha],
+	resourceQuantities: [6, 3, 10],
 	desc: "Constantly shoots radiation at enemies.",
 	count: 3
+};
+
+global.buildings[buildingNames.reactor] =
+{
+	icon: sprBuildingReactor,
+	obj: objBuildingReactor,
+	placer: objPlacerReactor,
+	resourceTypes: [resourceNames.metal, resourceNames.alpha, resourceNames.quantum],
+	resourceQuantities: [5, 6, 2],
+	desc: "Increases rate of enemy spawner, spawned enemies have 50% hp.",
+	count: 1
 };

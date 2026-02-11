@@ -16,3 +16,9 @@ function rank_to_num(rank)
 		default: return 0;
 	}
 }
+
+function set_shake(shake, obj = id)
+{
+	if obj.shake > shake { exit; }
+	obj.shake = shake;
+}

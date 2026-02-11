@@ -42,6 +42,7 @@ enum enemyNames
 	conveyor,
 	grill,
 	radiator,
+	antenna,
 	
 	length
 }
@@ -52,6 +53,7 @@ enum buildingNames
 	magnet,
 	magnetCoiled,
 	ioniser,
+	reactor,
 	
 	length
 }

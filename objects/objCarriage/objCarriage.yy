@@ -8,8 +8,8 @@
   "name":"objCarriage",
   "overriddenProperties":[],
   "parent":{
-    "name":"The Metal Forge",
-    "path":"The Metal Forge.yyp",
+    "name":"Props",
+    "path":"folders/Props.yy",
   },
   "parentObjectId":null,
   "persistent":false,

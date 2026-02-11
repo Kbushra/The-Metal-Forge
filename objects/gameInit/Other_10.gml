@@ -21,7 +21,7 @@ global.enemy[enemyNames.grill] =
 	obj: objMetalGrill,
 	resourceTypes: [resourceNames.metal, resourceNames.rod, resourceNames.quantum],
 	resourceQuantities: [2, 3, 1],
-	resourceProbabilities: [1, 0.8, 0.1]
+	resourceProbabilities: [1, 0.8, 0.05]
 }
 
 global.enemy[enemyNames.radiator] =
@@ -30,6 +30,14 @@ global.enemy[enemyNames.radiator] =
 	resourceTypes: [resourceNames.metal, resourceNames.alpha, resourceNames.battery],
 	resourceQuantities: [4, 2, 2],
 	resourceProbabilities: [1, 0.9, 0.2]
+}
+
+global.enemy[enemyNames.antenna] =
+{
+	obj: objMetalAntenna,
+	resourceTypes: [resourceNames.metal, resourceNames.rod, resourceNames.alpha, resourceNames.battery, resourceNames.quantum],
+	resourceQuantities: [2, 1, 3, 1, 1],
+	resourceProbabilities: [1, 0.9, 0.5, 0.8, 0.12]
 }
 
 global.resource[resourceNames.metal] =

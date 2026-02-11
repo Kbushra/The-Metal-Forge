@@ -1,4 +1,4 @@
-depth = -bbox_bottom;
+depth = objPlayer.depth + 32;
 
 x = objPlayer.x + get_spd_from_dir(objPlayer.faceDirection)[0] * 32;
 y = objPlayer.y + get_spd_from_dir(objPlayer.faceDirection)[1] * 42;

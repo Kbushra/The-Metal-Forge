@@ -25,8 +25,10 @@ if got_signal("beamed")
 with beam
 {
 	x = other.x;
-	y = other.y;
+	y = other.y + 5;
 	depth = other.depth + 1;
+	
+	mask_index = image_angle % 180 == 0 ? sprRadiationBeamHMask : sprRadiationBeamVMask;
 	
 	var count = 0;
 	while place_free(x, y) && count < 100
@@ -42,6 +44,8 @@ with beam
 		image_xscale -= 0.05;
 		count++;
 	}
+	
+	mask_index = -1;
 }
 
 if !place_free(x + hsp * spd, y + vsp * spd) { hsp = 0; vsp = 0; }

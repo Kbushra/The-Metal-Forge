@@ -2,13 +2,19 @@ send_signal(objPlayer, "puppet", true);
 
 if step == 0
 {
-	objPlayer.sprite_index = sprPlayerRR;
-	objPlayer.image_speed = 1;
-	objPlayer.moving = true;
-	objPlayer.faceDirection = "R";
-	objPlayer.stillDirection = "R";
+	with objPlayer
+	{
+		sprite_index = sprPlayerRR;
+		image_speed = 1;
+		image_blend = c_white;
+		image_xscale = 1;
+		image_yscale = 1;
+		faceDirection = "R";
+		stillDirection = "R";
 	
-	if window_has_focus() || instance_exists(objVolt) { objPlayer.x += 2; }
+		moving = window_has_focus() || instance_exists(objVolt);
+		if moving { x += 2; }
+	}
 	
 	if objPlayer.x >= 100 && !instance_exists(objVolt)
 	{
@@ -37,7 +43,7 @@ if step == 2
 		for (var i = 0; i < 20; i++)
 		{
 			instance_create_depth(-32, irandom_range(112, 208), 0,
-				choose(objMetalTin, objMetalConveyor, objMetalGrill));
+				global.enemy[irandom(array_length(global.enemy) - 1)].obj);
 		}
 		
 		with (objMetalGrill) { targX = irandom_range(32, 64); }

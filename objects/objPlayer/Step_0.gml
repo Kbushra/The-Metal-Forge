@@ -40,7 +40,7 @@ if state == playerStates.knockback
 	image_blend = knockbackTime % 0.2 < 0.1 ? c_red : c_maroon;
 	
 	knockbackTime += 0.05;
-	if knockbackTime <= 0.3 { gameCamera.shake = 1; }
+	if knockbackTime <= 0.3 { set_shake(1, gameCamera); }
 }
 
 if state != playerStates.normal { exit; }

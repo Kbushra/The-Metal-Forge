@@ -4,6 +4,8 @@ highlight = 1;
 
 shownHp = hp;
 
+deathAnim = false;
+
 ///@func deal_damage(dmg)
 deal_damage = function(dmg)
 {

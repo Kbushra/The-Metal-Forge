@@ -1,3 +1,5 @@
+selected = 0;
+
 var availableResources = [];
 
 with (trigEnemySpawn)

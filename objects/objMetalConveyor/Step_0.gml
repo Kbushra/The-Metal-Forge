@@ -11,7 +11,7 @@ else if spd < 0
 {
 	reset_action("choose_dir");
 	image_blend = abs(spd) % 1 < 0.5 ? c_red : c_maroon;
-	gameCamera.shake = abs(spd)/2;
+	set_shake(abs(spd)/2, gameCamera);
 }
 
 spd += 0.1;

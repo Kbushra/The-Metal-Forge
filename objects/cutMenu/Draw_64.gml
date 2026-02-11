@@ -1,6 +1,6 @@
 var controls = @"Controls:
 Arrows/WASD to move
-" + (os_browser == browser_not_a_browser ? "F4" : "F10") + @" to fullscreen
+F4 to fullscreen
 
 Z/ENTER to confirm
 X/SHIFT to deny or run

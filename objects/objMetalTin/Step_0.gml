@@ -2,6 +2,8 @@ depth = -bbox_bottom;
 
 if state == pathfinderStates.puppet { exit; }
 
+if !in_bounds_strict(objPlayer.x, objPlayer.y) { state = pathfinderStates.wander; }
+
 if state == pathfinderStates.wander
 {
 	wanderDelay--;

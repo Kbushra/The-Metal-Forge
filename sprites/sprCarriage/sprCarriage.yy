@@ -44,8 +44,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"The Metal Forge",
-    "path":"The Metal Forge.yyp",
+    "name":"Props",
+    "path":"folders/Props.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

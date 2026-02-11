@@ -20,7 +20,7 @@ global.level[0] =
 global.level[1] = 
 {
 	name: "The Hall",
-	ranks: [5000, 6500, 8000, 11000, 14000],
+	ranks: [4000, 6500, 8000, 11000, 14000],
 	comments:
 	[
 		"First room and you're already failing?",
@@ -35,14 +35,29 @@ global.level[1] =
 global.level[2] = 
 {
 	name: "Acid Gen",
-	ranks: [6500, 8000, 8500, 11000, 13000],
+	ranks: [5500, 8000, 8500, 11000, 13000],
 	comments:
 	[
 		"Let it get in your skin?",
-		"You're leaving all of that acidic profit behind!",
+		"You're leaving all of that acid behind!",
 		"I'd never be trusted with this equipment...",
 		"Not a single person? Luckily, I can reap the benefits.",
 		"I run these halls.",
 		"Who's competing with me anyway?"
+	]
+};
+
+global.level[3] = 
+{
+	name: "Radio Station",
+	ranks: [7500, 9000, 12000, 14000, 18000],
+	comments:
+	[
+		"Signalled for a loss?",
+		"Could have grabbed those contacts on the way out.",
+		"I clearly didn't notice some profit.",
+		"Maybe TVs are profitable too.",
+		"Am I not speaking loud enough? I NEED MORE.",
+		"Couldn't get this hoard with radios."
 	]
 };

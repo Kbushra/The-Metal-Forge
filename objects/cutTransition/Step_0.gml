@@ -11,11 +11,13 @@ if step == 0
 	{
 		play_sfx(sfxClank); //Clank out
 		
+		//Spawn in early, its the same room
+		if room == destRoom { objPlayer.spawn_in(); }
+		objPlayer.knockbackTime = 1;
+		
 		step++;
 		time = 0;
 		room_goto(destRoom);
-		
-		objPlayer.spawn_in();
 		
 		for (var i = 0; i < resourceNames.length; i++) { global.resourceCount[i] = 0; }
 		
@@ -24,6 +26,7 @@ if step == 0
 			hp = maxHp;
 			shownHp = maxHp;
 			highlight = 1;
+			deathAnim = false;
 		}
 	}
 }

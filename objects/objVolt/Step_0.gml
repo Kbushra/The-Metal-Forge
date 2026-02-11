@@ -15,11 +15,10 @@ if zapping
 	image_yscale += 0.05;
 	image_alpha -= 0.05;
 	
-	gameCamera.shake = 0;
 	if !ignorePuppeting && objPlayer.state != playerStates.knockback { instance_destroy(); exit; }
 	else if (ignorePuppeting && (objPlayer.state == playerStates.normal || image_alpha <= 0)) { instance_destroy(); exit; }
 	
-	gameCamera.shake = 1;
+	set_shake(1, gameCamera);
 	exit;
 }
 

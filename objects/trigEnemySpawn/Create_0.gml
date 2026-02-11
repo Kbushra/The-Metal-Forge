@@ -1,9 +1,11 @@
 assert(array_length(enemyTypes) == array_length(enemyProbabilities),
 	"Enemy types doesn't match with probabilities!");
 
-alarm[0] = RAND_ENEMYSPAWN * delayMult * 1.5;
+alarm[0] = RAND_ENEMYSPAWN * delayMult * 1.2;
 image_speed = 0;
 spawnPs = part_system_create(psSmoke);
+
+hasReactor = false;
 
 ///@func spawn_enemy()
 spawn_enemy = function()
@@ -13,9 +15,15 @@ spawn_enemy = function()
 	for (var i = 0; i < array_length(enemyProbabilities); i++)
 	{
 		counter += enemyProbabilities[i];
-		if chance <= counter { instance_create_depth(x, y, depth, global.enemy[enemyTypes[i]].obj); exit; }
+		if chance <= counter
+		{
+			var inst = instance_create_depth(x, y, depth, global.enemy[enemyTypes[i]].obj);
+			inst.hp = inst.maxHp / (hasReactor ? 3 : 1);
+			exit;
+		}
 	}
 
 	//If all chances failed (bro didnt make them add up to 1)
-	instance_create_depth(x, y, depth, global.enemy[enemyTypes[0]].obj);
+	var inst = instance_create_depth(x, y, depth, global.enemy[enemyTypes[0]].obj);
+	inst.hp = inst.maxHp / (hasReactor ? 3 : 1);
 }

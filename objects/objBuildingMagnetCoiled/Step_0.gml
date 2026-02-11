@@ -2,5 +2,5 @@ depth = -bbox_bottom;
 
 with (parentMetal)
 {
-	if near_equals(x, other.x, 32) || near_equals(y, other.y, 32) { hp -= 0.7; shake = 5 - (5 * hp/maxHp); }
+	if near_equals(x, other.x, 32) || near_equals(y, other.y, 32) { hp -= 0.7; set_shake(5 - (5 * hp/maxHp)); }
 }

@@ -85,7 +85,7 @@ update_direction = function()
 ///@func knock(xChange, yChange, intensity, [dmg])
 knock = function(xChange, yChange, intensity, dmg = 0)
 {
-	if state != playerStates.normal { return; }
+	if state != playerStates.normal { return false; }
 	
 	objBarHealth.deal_damage(dmg);
 	play_sfx(sfxDamage);
@@ -96,6 +96,8 @@ knock = function(xChange, yChange, intensity, dmg = 0)
 	knockbackY = y + sign(yChange) * intensity;
 	knockbackTime = 0;
 	state = playerStates.knockback;
+	
+	return true;
 }
 
 ///@func freeze()
