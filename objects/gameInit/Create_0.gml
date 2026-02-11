@@ -29,4 +29,4 @@ instance_create_depth(x, y, depth, gameCamera);
 instance_create_depth(x, y, depth, gamePathfinder);
 
 //Create only on debug builds
-instance_create_depth(x, y, depth, gameDebug);
+//instance_create_depth(x, y, depth, gameDebug);
