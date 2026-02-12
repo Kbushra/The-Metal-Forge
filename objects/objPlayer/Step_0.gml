@@ -69,4 +69,4 @@ image_speed = moving;
 
 sprite_index = asset_get_index($"sprPlayer{correct_horizontal_dir(faceDirection)}{global.denyHeld && moving ? "R" : ""}");
 
-print(sprite_get_name(sprite_index));
+print($"dir: {faceDirection}, state: {global.denyHeld && moving ? "R" : ""}");

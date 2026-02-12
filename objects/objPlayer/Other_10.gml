@@ -29,7 +29,7 @@ key_to_dir = function(key)
 {
 	var keys = struct_get_names(gameControl.directionKey);
 	for (var i = 0; i < array_length(keys); i++)
-	{ if gameControl.directionKey[$ keys[i]] == key { return keys[i]; } }
+	{ if gameControl.directionKey[$ keys[i]] == key { return string_char_at(keys[i], 1); } }
 	
 	return "";
 }
