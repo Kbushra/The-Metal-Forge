@@ -1,4 +1,4 @@
-depth = -999;
+depth = -bbox_bottom;
 
 image_angle += 20;
 

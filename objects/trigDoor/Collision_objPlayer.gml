@@ -1,4 +1,4 @@
-if animate { exit; }
+if animate || !escape { exit; }
 
 animate = true;
 running = global.denyHeld;

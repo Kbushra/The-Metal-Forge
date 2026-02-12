@@ -16,3 +16,5 @@ log = false;
 
 event_user(0);
 reset_nodes();
+
+alarm[0] = 1;

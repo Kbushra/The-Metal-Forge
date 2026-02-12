@@ -5,7 +5,7 @@ prevHsp = 0;
 prevVsp = 0;
 
 moving = false;
-firstDirection = "";
+firstDirection = "D";
 stillDirection = "D";
 faceDirection = "D";
 axis = VERTICAL;

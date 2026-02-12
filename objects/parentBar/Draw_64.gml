@@ -1,3 +1,13 @@
+var prevX = x;
+var prevY = y;
+
+if hp <= 40
+{
+	var factor = (maxHp - hp)/maxHp;
+	x += random_range(-2 * factor, 2 * factor);
+	y += random_range(-2 * factor, 2 * factor);
+}
+
 draw_set_colour(bg);
 draw_rectangle(x - sprite_width, y - sprite_height/2, x, y + sprite_height/2, false);
 
@@ -17,3 +27,6 @@ draw_text(x - 5, y, name);
 draw_reset();
 
 draw_self();
+
+x = prevX;
+y = prevY;

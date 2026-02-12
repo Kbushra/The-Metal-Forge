@@ -51,6 +51,8 @@ if step == 4
 			}
 		
 			script_execute_ext(draw_list, array_concat([80, 120, 12, selected[1]], levels));
+			
+			if global.completed { draw_text(80, 120 + 12 * global.levelsUnlocked + 12, "Demo end!"); }
 		}
 	}
 	

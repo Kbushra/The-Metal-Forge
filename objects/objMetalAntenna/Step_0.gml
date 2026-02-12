@@ -17,6 +17,7 @@ if state == pathfinderStates.wander
 
 if state != pathfinderStates.pathfind { exit; }
 
+alarm[0] = -1;
 image_speed = 1;
 
 wanderDist = RAND_WANDER;
@@ -30,7 +31,7 @@ tileY = clamp(tileY, 0, array_length(gamePathfinder.nodes[tileX]) - 1);
 if !array_equals(moving, [false, false]) //Go to tile
 {
 	//Can't pathfind with nowhere to go
-	if array_length(next) == 0
+	if array_length(next) == 0 || !place_free(next[0], next[1])
 	{
 		moving = [false, false];
 		state = pathfinderStates.wander;
