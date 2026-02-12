@@ -1,4 +1,6 @@
 event_inherited();
+maxHp = 150;
+hp = maxHp;
 deathAnim = false;
 collapseTimer = 0;
 

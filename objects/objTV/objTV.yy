@@ -28,7 +28,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
     "name":"sprTV",
     "path":"sprites/sprTV/sprTV.yy",
