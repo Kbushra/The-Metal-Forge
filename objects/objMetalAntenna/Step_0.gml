@@ -45,8 +45,6 @@ if !array_equals(moving, [false, false]) //Go to tile
 	exit;
 }
 
-play_sfx(sfxStep2);
-
 var node = gamePathfinder.nodes[tileX][tileY];
 
 //Go to next tile
@@ -56,4 +54,6 @@ if array_length(next) > 0
 {
 	var randNode = irandom(array_length(next) - 1);
 	next = next[randNode];
+	
+	play_sfx(sfxStep2);
 }

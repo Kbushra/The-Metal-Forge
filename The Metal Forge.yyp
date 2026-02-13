@@ -72,6 +72,7 @@
     {"id":{"name":"objMetalGrill","path":"objects/objMetalGrill/objMetalGrill.yy",},},
     {"id":{"name":"objMetalRadiator","path":"objects/objMetalRadiator/objMetalRadiator.yy",},},
     {"id":{"name":"objMetalTin","path":"objects/objMetalTin/objMetalTin.yy",},},
+    {"id":{"name":"objParticleCleanup","path":"objects/objParticleCleanup/objParticleCleanup.yy",},},
     {"id":{"name":"objPlacerIoniser","path":"objects/objPlacerIoniser/objPlacerIoniser.yy",},},
     {"id":{"name":"objPlacerMagnet","path":"objects/objPlacerMagnet/objPlacerMagnet.yy",},},
     {"id":{"name":"objPlacerMagnetCoiled","path":"objects/objPlacerMagnetCoiled/objPlacerMagnetCoiled.yy",},},

@@ -1,5 +1,8 @@
-if instance_number(parentMetal) > 0 && objPlayer.state == playerStates.normal &&
-!round_won() { hp -= 0.005 * power(1.1, instance_number(objBuildingPedestal)); }
+if instance_number(parentMetal) > 0 && objPlayer.state == playerStates.normal && !round_won()
+{
+	var scaleFactor = power(1.025, instance_number(objBuildingPedestal));
+	hp -= 0.005 * clamp(scaleFactor, 1, 1.25);
+}
 
 if (hp > 0 || (objBarHealth.deathAnim && !deathAnim)) { exit; }
 deathAnim = true;

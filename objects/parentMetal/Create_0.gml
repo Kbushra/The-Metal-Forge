@@ -1,6 +1,6 @@
 shake = 0;
-hp = 100;
-maxHp = 100;
+maxHp = 100 * (raised_difficulty() ? 1.5 : 1);
+hp = maxHp;
 
 state = pathfinderStates.wander;
 

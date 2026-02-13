@@ -22,12 +22,16 @@ var prevY = y;
 
 move_angle(image_angle, spd * image_xscale);
 
-if spd >= 0 && !place_free(x, y)
+if !place_free(x, y)
 {
 	x = prevX;
 	y = prevY;
 	
-	spd = clamp(-spd/2, -3, -0.5);
-	play_sfx(sfxThump, abs(spd) / 4);
-	objBarBuilding.deal_damage(abs(spd) / 4);
+	if spd >= 0
+	{
+		spd = clamp(-spd/2, -3, -0.5);
+		play_sfx(sfxThump, abs(spd) / 4);
+		objBarBuilding.deal_damage(abs(spd) / 4);
+	}
+	else { spd = 0; }
 }

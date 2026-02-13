@@ -9,25 +9,7 @@ var rankCount = 5; //S is excluded
 rank = "F";
 
 if !round_won() { rank = "DEAD"; }
-else if objProfit.profit >= global.level[currLevel].ranks[rankCount - 1] { rank = "S"; }
-else
-{
-	for (var i = 0; i < rankCount; i++)
-	{
-		if objProfit.profit >= global.level[currLevel].ranks[i] { continue; }
-	
-		switch i
-		{
-			case 0: rank = "F"; break;
-			case 1: rank = "D"; break;
-			case 2: rank = "C"; break;
-			case 3: rank = "B"; break;
-			case 4: rank = "A"; break;
-		}
-		
-		break;
-	}
-}
+else { rank = objProfit.rank; }
 
 if round_won()
 {

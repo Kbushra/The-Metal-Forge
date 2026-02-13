@@ -18,17 +18,6 @@ can_place = function()
 	return canAfford && !reachedLimit;
 }
 
-global.buildings[buildingNames.pedestal] =
-{
-	icon: sprBuildingPedestal,
-	obj: objBuildingPedestal,
-	placer: objPlacerPedestal,
-	resourceTypes: [resourceNames.metal],
-	resourceQuantities: [10],
-	desc: "Helps sustain stability.",
-	count: 2
-};
-
 global.buildings[buildingNames.magnet] =
 {
 	icon: sprBuildingMagnet,
@@ -49,6 +38,17 @@ global.buildings[buildingNames.magnetCoiled] =
 	resourceQuantities: [8, 8],
 	desc: "Tears metal apart at infinite distance on the NESW axis.",
 	count: 1
+};
+
+global.buildings[buildingNames.pedestal] =
+{
+	icon: sprBuildingPedestal,
+	obj: objBuildingPedestal,
+	placer: objPlacerPedestal,
+	resourceTypes: [resourceNames.metal],
+	resourceQuantities: [10],
+	desc: "Helps sustain stability.",
+	count: 2
 };
 
 global.buildings[buildingNames.ioniser] =

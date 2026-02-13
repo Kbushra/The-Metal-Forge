@@ -1,7 +1,7 @@
 assert(array_length(enemyTypes) == array_length(enemyProbabilities),
 	"Enemy types doesn't match with probabilities!");
 
-alarm[0] = RAND_ENEMYSPAWN * delayMult * 1.2;
+alarm[0] = 180;
 image_speed = 0;
 spawnPs = part_system_create(psSmoke);
 

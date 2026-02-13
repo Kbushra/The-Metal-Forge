@@ -20,7 +20,7 @@ global.level[0] =
 global.level[1] = 
 {
 	name: "The Hall",
-	ranks: [4000, 6500, 8000, 11000, 14000],
+	ranks: [4000, 5500, 7000, 9000, 11000],
 	comments:
 	[
 		"First room and you're already failing?",
@@ -35,7 +35,7 @@ global.level[1] =
 global.level[2] = 
 {
 	name: "Acid Gen",
-	ranks: [5500, 8000, 8500, 11000, 13000],
+	ranks: [5500, 7000, 8000, 10000, 12000],
 	comments:
 	[
 		"Let it get in your skin?",
@@ -50,7 +50,7 @@ global.level[2] =
 global.level[3] = 
 {
 	name: "Radio Station",
-	ranks: [7500, 9000, 12000, 14000, 18000],
+	ranks: [6500, 8000, 9500, 11000, 14000],
 	comments:
 	[
 		"Signalled for a loss?",

@@ -2,6 +2,8 @@ depth = -bbox_bottom;
 
 if state == pathfinderStates.puppet { exit; }
 
+image_blend = state == pathfinderStates.pathfind ? c_red : c_white;
+
 if !in_bounds_strict(objPlayer.x, objPlayer.y) { state = pathfinderStates.wander; }
 
 if state == pathfinderStates.wander
@@ -74,7 +76,6 @@ if !array_equals(moving, [false, false]) //Go to tile
 	exit;
 }
 
-play_sfx(sfxStep2);
 image_index = 1;
 
 var node = gamePathfinder.nodes[tileX][tileY];
@@ -86,4 +87,6 @@ if array_length(next) > 0
 {
 	var randNode = irandom(array_length(next) - 1);
 	next = next[randNode];
+	
+	play_sfx(sfxStep2);
 }

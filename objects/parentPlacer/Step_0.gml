@@ -18,6 +18,7 @@ if global.confirm && valid
 {
 	play_sfx(sfxBought);
 	instance_create_depth(x, y, depth, building.obj);
+	if instance_exists(gameAsserter) { exit; }
 	
 	for (var i = 0; i < array_length(building.resourceTypes); i++)
 	{

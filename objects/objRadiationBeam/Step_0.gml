@@ -1,3 +1,5 @@
+if round_won() { instance_destroy(); exit; }
+
 if !beamed
 {
 	image_alpha = lerp(0, 0.2, time);

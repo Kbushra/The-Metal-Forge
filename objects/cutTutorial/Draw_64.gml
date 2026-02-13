@@ -50,7 +50,7 @@ switch step
 	
 	case 6:
 	if softlocked || objProfit.profit > 2000 { step++; }
-	draw_text_ext(GAME_WIDTH/2, GAME_HEIGHT - 35, "Resource is money. You can also build more with it.", 10, GAME_WIDTH - 20);
+	draw_text_ext(GAME_WIDTH/2, GAME_HEIGHT - 35, "Resource is money, and you can build more with it.", 10, GAME_WIDTH - 20);
 	break;
 	
 	case 7:

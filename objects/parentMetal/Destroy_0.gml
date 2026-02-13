@@ -3,6 +3,7 @@ play_sfx(sfxSmokeExplosion);
 
 var ps = part_system_create(psSmoke);
 part_particles_burst(ps, x, y, psSmoke);
+part_delay_cleanup(ps);
 
 for (var i = 0; i < array_length(global.enemy[ind].resourceTypes); i++)
 {

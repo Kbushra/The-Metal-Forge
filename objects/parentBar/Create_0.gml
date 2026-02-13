@@ -10,5 +10,5 @@ deathAnim = false;
 deal_damage = function(dmg)
 {
 	if objPlayer.state == playerStates.puppet { return; }
-	hp -= dmg;
+	hp -= dmg * (raised_difficulty() ? 1.5 : 1);
 }

@@ -1,4 +1,5 @@
 profit = 0;
+rank = "F";
 
 for (var i = 0; i < resourceNames.length; i++)
 {

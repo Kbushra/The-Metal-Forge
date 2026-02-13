@@ -1,0 +1,1 @@
+if ps != noone { part_system_destroy(ps); }

@@ -1,3 +1,5 @@
+if !place_free(x, y) { alarm[1] = 5; }
+
 hsp = irandom_range(-2, 2);
 vsp = irandom_range(-3, -2);
 

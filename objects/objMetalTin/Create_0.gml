@@ -6,4 +6,4 @@ wanderDelay = irandom(20);
 spd = random_range(0.07, 0.13);
 
 state = choose(pathfinderStates.wander, pathfinderStates.pathfind);
-if state == pathfinderStates.pathfind { image_blend = c_red; }
+image_blend = state == pathfinderStates.pathfind ? c_red : c_white;

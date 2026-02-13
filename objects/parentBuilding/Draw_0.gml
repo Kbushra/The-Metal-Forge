@@ -1,3 +1,5 @@
+if instance_exists(parentPlacer) { alarm[0] = 30; }
+
 if collision_rectangle_extended(x, y, x, y, objPlayer, sprite_width/2 + 5) &&
 objPlayer.state == playerStates.normal && !round_won() && alarm[0] <= 0
 { image_blend = c_red; }

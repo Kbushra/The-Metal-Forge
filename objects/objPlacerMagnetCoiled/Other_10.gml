@@ -9,5 +9,6 @@ is_valid = function(_x, _y)
 		if near_equals(x, _x, 32) || near_equals(y, _y, 32) { return false; }
 	}
 	
-	return place_free(_x, _y) && !place_meeting(_x, _y, [trigEnemySpawn, parentMetal]);
+	return place_free(_x, _y) && !place_meeting(_x, _y, [trigEnemySpawn, parentMetal]) &&
+	!collision_rectangle_extended(_x, _y, _x, _y, trigDoor, sprite_width);
 }
