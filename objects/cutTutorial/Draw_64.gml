@@ -28,7 +28,7 @@ switch step
 	
 	case 2:
 	if objConstruction.open { step++; }
-	draw_text_ext(GAME_WIDTH/2, GAME_HEIGHT - 35, "To start, press C to see your construction menu.", 10, GAME_WIDTH - 20);
+	draw_text_ext(GAME_WIDTH/2, GAME_HEIGHT - 35, "To start, press C/CTRL to see your construction menu.", 10, GAME_WIDTH - 20);
 	break;
 	
 	case 3:

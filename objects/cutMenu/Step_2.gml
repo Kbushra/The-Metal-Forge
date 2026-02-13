@@ -77,7 +77,9 @@ if !instance_exists(cutTransition)
 { global.sfxBus.effects[0].gain = lerp(global.sfxBus.effects[0].gain, 0.3, 0.1); }
 else { global.sfxBus.effects[0] = undefined; }
 
-if selected[0] == 0 && selectStage == 1 && global.confirm && !instance_exists(cutTransition)
+if instance_exists(cutTransition) { exit; }
+
+if selected[0] == 0 && selectStage == 1 && global.confirm
 {
 	json_write();
 	global.currLevel = selected[1];
