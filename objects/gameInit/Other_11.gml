@@ -8,12 +8,12 @@ global.level[0] =
 	ranks: [2500, 3000, 4500, 8500, 12000],
 	comments:
 	[
-		"Doesn't feel like you were learning.",
-		"Did you learn something?",
-		"Did you learn something?",
-		"Seems you learnt something.",
-		"Seems you learnt something.",
-		"Okay you didn't have to try so hard."
+		"Doesn't feel like I was learning.",
+		"Am I learning something?",
+		"Am I learning something?",
+		"Oh, seems I learnt something.",
+		"Oh, seems I learnt something.",
+		"Maybe I didn't have to try so hard."
 	]
 };
 
@@ -23,7 +23,7 @@ global.level[1] =
 	ranks: [4000, 5500, 7000, 12000, 18000],
 	comments:
 	[
-		"First room and you're already failing?",
+		"First room and I'm already failing?",
 		"Bare minimum player.",
 		"Placed in C2? C'mon.",
 		"My pockets are full, but that's not enough.",
@@ -38,8 +38,8 @@ global.level[2] =
 	ranks: [5500, 7000, 8000, 15000, 25000],
 	comments:
 	[
-		"Let it get in your skin?",
-		"You're leaving all of that acid behind!",
+		"I let the pressure get in my skin.",
+		"I can't leave all of that profit behind!",
 		"I'd never be trusted with this equipment...",
 		"Not a single person? Luckily, I can reap the benefits.",
 		"I run these halls.",

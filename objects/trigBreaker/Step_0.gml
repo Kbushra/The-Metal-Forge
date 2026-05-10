@@ -6,7 +6,7 @@ if breaking
 {
 	send_signal(objPlayer, "puppet", true);
 	
-	if objPlayer.image_index >= 3
+	if objPlayer.image_index >= 2
 	{
 		objBreakerPanel.image_index = 1;
 		with (trigEnemySpawn) { alarm[0] = 0; } //No more spawning
@@ -14,7 +14,7 @@ if breaking
 		with (trigDoor) { if escape { solid = false; } }
 	}
 	
-	if objPlayer.image_index >= 5 { breaking = false; }
+	if objPlayer.image_index >= objPlayer.image_number - 1 { breaking = false; }
 }
 
 if objPlayer.faceDirection != "U" || !place_meeting(x, y + 5, objPlayer) ||

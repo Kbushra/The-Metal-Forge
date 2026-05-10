@@ -13,6 +13,6 @@ function play_bgm(bgm, gain = 1)
 	}
 	
 	audio_stop_sound(global.bgm);
-	global.bgm = audio_play_sound_on(global.bgmEmitter, bgm, true, 10, gain);
+	global.bgm = audio_play_sound_on(global.bgmEmitter, bgm, true, 20, gain);
 	return global.bgm;
 }

@@ -48,7 +48,7 @@ image_blend = c_white;
 image_angle = 0;
 image_alpha = 1;
 
-spd = global.denyHeld ? 2.5 : 1.5;
+spd = global.denyHeld ? 2 : 1;
 
 prevHsp = hsp;
 prevVsp = vsp;
@@ -63,7 +63,7 @@ y += floor(vsp) * spd;
 
 update_direction();
 
-if image_speed != moving { image_index = moving; }
+if image_speed != moving { image_index = !moving; }
 image_speed = moving;
 
 sprite_index = asset_get_index($"sprPlayer{correct_horizontal_dir(faceDirection)}{global.denyHeld && moving ? "R" : ""}");

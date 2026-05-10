@@ -43,7 +43,7 @@ switch step
 	case 5:
 	if softlocked && alarm[0] <= 0 { alarm[0] = 240; }
 	if instance_number(parentResource) >= 5 || global.resourceCount[resourceNames.metal] > 10 { step++; }
-	draw_text_ext(GAME_WIDTH/2, GAME_HEIGHT - 35, "You have to avoid the enemies to keep HP up, and some enemies might damage the building. The building slowly loses stability too.", 10, GAME_WIDTH - 20);
+	draw_text_ext(GAME_WIDTH/2, GAME_HEIGHT - 35, "You have to avoid the enemies to keep HP up, and stability degrades over time. Keep an eye out!", 10, GAME_WIDTH - 20);
 	break;
 	
 	case 6:
