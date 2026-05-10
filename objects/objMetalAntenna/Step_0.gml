@@ -12,7 +12,7 @@ if state == pathfinderStates.wander
 	image_index = 0;
 	set_shake(1);
 	
-	if alarm[0] <= 0 { alarm[0] = RAND_WANDER; }
+	if alarm[0] < 0 { alarm[0] = RAND_WANDER/2; }
 }
 
 if state != pathfinderStates.pathfind { exit; }

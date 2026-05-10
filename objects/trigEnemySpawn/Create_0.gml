@@ -18,12 +18,14 @@ spawn_enemy = function()
 		if chance <= counter
 		{
 			var inst = instance_create_depth(x, y, depth, global.enemy[enemyTypes[i]].obj);
-			inst.hp = inst.maxHp / (hasReactor ? 3 : 1);
+			inst.maxHp *= hasReactor ? 2 : 1;
+			inst.hp = inst.maxHp;
 			exit;
 		}
 	}
 
 	//If all chances failed (bro didnt make them add up to 1)
 	var inst = instance_create_depth(x, y, depth, global.enemy[enemyTypes[0]].obj);
-	inst.hp = inst.maxHp / (hasReactor ? 3 : 1);
+	inst.maxHp *= hasReactor ? 2 : 1;
+	inst.hp = inst.maxHp;
 }

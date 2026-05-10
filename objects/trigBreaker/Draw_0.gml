@@ -17,6 +17,6 @@ draw_set_font(fntSmall);
 draw_set_halign(fa_middle);
 
 var minimum = global.level[global.currLevel].ranks[0];
-draw_text(x, y + sprite_height/2 + 2, $"Break?\n(>= ${minimum} to pass)");
+draw_text(x, y + sprite_height/2 + 2, $"Break?\n(${minimum} to pass)");
 
 draw_reset();

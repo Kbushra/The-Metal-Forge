@@ -5,7 +5,7 @@ global.currLevel = 0;
 global.level[0] = 
 {
 	name: "Tutorial",
-	ranks: [2500, 3000, 3500, 4000, 9000],
+	ranks: [2500, 3000, 4500, 8500, 12000],
 	comments:
 	[
 		"Doesn't feel like you were learning.",
@@ -20,7 +20,7 @@ global.level[0] =
 global.level[1] = 
 {
 	name: "The Hall",
-	ranks: [4000, 5500, 7000, 9000, 11000],
+	ranks: [4000, 5500, 7000, 12000, 18000],
 	comments:
 	[
 		"First room and you're already failing?",
@@ -35,7 +35,7 @@ global.level[1] =
 global.level[2] = 
 {
 	name: "Acid Gen",
-	ranks: [5500, 7000, 8000, 10000, 12000],
+	ranks: [5500, 7000, 8000, 15000, 25000],
 	comments:
 	[
 		"Let it get in your skin?",
@@ -50,7 +50,7 @@ global.level[2] =
 global.level[3] = 
 {
 	name: "Radio Station",
-	ranks: [6500, 8000, 9500, 11000, 14000],
+	ranks: [6500, 8000, 11000, 21000, 40000],
 	comments:
 	[
 		"Signalled for a loss?",

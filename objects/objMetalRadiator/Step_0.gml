@@ -2,7 +2,7 @@ depth = -bbox_bottom;
 
 if state == pathfinderStates.puppet
 {
-	part_system_colour(radiationPs, c_white, 0);
+	if part_system_exists(radiationPs) part_system_destroy(radiationPs);
 	instance_destroy(beam);
 	exit;
 }
@@ -20,32 +20,6 @@ if got_signal("beamed")
 	spd = 10;
 	
 	stop_signal("beamed");
-}
-
-with beam
-{
-	x = other.x;
-	y = other.y + 5;
-	depth = other.depth + 1;
-	
-	mask_index = image_angle % 180 == 0 ? sprRadiationBeamHMask : sprRadiationBeamVMask;
-	
-	var count = 0;
-	while place_free(x, y) && count < 100
-	{
-		image_xscale++;
-		count++;
-	}
-	
-	count = 0;
-	
-	while !place_free(x, y) && count < 21
-	{
-		image_xscale -= 0.05;
-		count++;
-	}
-	
-	mask_index = -1;
 }
 
 if !place_free(x + hsp * spd, y + vsp * spd) { hsp = 0; vsp = 0; }

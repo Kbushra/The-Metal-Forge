@@ -15,7 +15,10 @@
     "name":"Triggers",
     "path":"folders/Triggers.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"trigSolid",
+    "path":"objects/trigSolid/trigSolid.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
