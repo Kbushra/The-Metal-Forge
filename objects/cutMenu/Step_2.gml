@@ -10,7 +10,6 @@ if step == 0
 		image_xscale = 1;
 		image_yscale = 1;
 		faceDirection = "R";
-		stillDirection = "R";
 	
 		moving = window_has_focus() || instance_exists(objVolt);
 		if moving { x += 2; }

@@ -1,3 +1,4 @@
+//All other GUI elements draw above it
 if objPlayer.state == playerStates.puppet || round_won() { open = false; }
 else if global.construct { open = !open; play_sfx(open ? sfxConstructionOpen : sfxConstructionClose); }
 

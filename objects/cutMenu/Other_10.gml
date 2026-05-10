@@ -1,7 +1,7 @@
 move_selection = function()
 {
-	if global.confirm { selectStage++; play_sfx(sfxClickSelect); }
-	if global.deny { selected[1] = 0; selectStage--; play_sfx(sfxClickSelect); }
+	if global.confirm { selectStage++; play_sfx(sfxClick); }
+	if global.deny { selected[1] = 0; selectStage--; play_sfx(sfxClickMove); }
 	selectStage = clamp(selectStage, 0, 1);
 	
 	if global.upPress { selected[selectStage]--; play_sfx(sfxClickMove); }

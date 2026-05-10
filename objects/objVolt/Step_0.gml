@@ -1,9 +1,9 @@
-depth = -bbox_bottom;
+depth = -999;
 
 image_angle += 20;
 
 if ((place_meeting(x, y, objCarriage) && !place_free(x, y)) || round_won()) { instance_destroy(); exit; }
-if !in_bounds_strict(x, y) && alarm[0] <= 0 { alarm[0] = 120; exit; }
+if !in_bounds_strict(x, y) && alarm[0] < 0 { alarm[0] = 60; exit; }
 
 if zapping
 {

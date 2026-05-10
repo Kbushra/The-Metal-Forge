@@ -18,3 +18,14 @@ global.denyRelease = keyboard_check_released(vk_shift) || keyboard_check_release
 global.construct = keyboard_check_pressed(vk_control) || keyboard_check_pressed(ord("C"));
 global.constructLeft = keyboard_check_pressed(ord("Q"));
 global.constructRight = keyboard_check_pressed(ord("E"));
+
+var names = struct_get_names(directionKey);
+for (var i = 0; i < array_length(names); i++)
+{
+	if keyboard_check_pressed(directionKey[$ names[i]])
+	{ array_push_unique(inputQueue, directionKey[$ names[i]]); }
+	
+	if keyboard_check_released(directionKey[$ names[i]]) &&
+	array_contains(inputQueue, directionKey[$ names[i]])
+	{ array_delete(inputQueue, array_get_index(inputQueue, directionKey[$ names[i]]), 1); }
+}

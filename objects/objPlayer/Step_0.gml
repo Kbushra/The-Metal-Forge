@@ -34,7 +34,6 @@ if state == playerStates.knockback
 	image_speed = 0;
 	image_index = 0;
 	faceDirection = get_dir(knockbackX - xstart, knockbackY - ystart, axis);
-	stillDirection = faceDirection;
 	sprite_index = asset_get_index($"sprPlayer{correct_horizontal_dir(faceDirection)}");
 	
 	image_blend = knockbackTime % 0.2 < 0.1 ? c_red : c_maroon;
@@ -49,7 +48,7 @@ image_blend = c_white;
 image_angle = 0;
 image_alpha = 1;
 
-spd = global.denyHeld ? 2 : 1;
+spd = global.denyHeld ? 2.5 : 1.5;
 
 prevHsp = hsp;
 prevVsp = vsp;

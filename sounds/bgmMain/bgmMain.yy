@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sfxClickSelect",
+  "%Name":"bgmMain",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,17 +10,17 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.18,
+  "duration":56.470566,
   "exportDir":"",
-  "name":"sfxClickSelect",
+  "name":"bgmMain",
   "parent":{
-    "name":"Sfx",
-    "path":"folders/Sfx.yy",
+    "name":"Bgm",
+    "path":"folders/Bgm.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfxClickSelect.mp3",
+  "soundFile":"bgmMain.mp3",
   "volume":1.0,
 }

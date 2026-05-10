@@ -6,7 +6,6 @@ prevVsp = 0;
 
 moving = false;
 firstDirection = "D";
-stillDirection = "D";
 faceDirection = "D";
 axis = VERTICAL;
 

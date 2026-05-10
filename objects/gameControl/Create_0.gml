@@ -9,3 +9,5 @@ directionKey =
 	DAlt: ord("S"),
 	UAlt: ord("W")
 }
+
+inputQueue = [];

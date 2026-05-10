@@ -5,13 +5,7 @@ event_user(0);
 event_user(1);
 for (var i = 0; i < resourceNames.length; i++) { global.resourceCount[i] = 0; }
 
-global.sfxEmitter = audio_emitter_create();
-global.sfxBus = audio_bus_create();
-audio_emitter_bus(global.sfxEmitter, global.sfxBus);
-
-global.bgmEmitter = audio_emitter_create();
-global.bgmBus = audio_bus_create();
-audio_emitter_bus(global.bgmEmitter, global.bgmBus);
+instance_create_depth(x, y, depth, gameAudio);
 
 json_read();
 

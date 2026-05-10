@@ -12,8 +12,6 @@ else if !done_action("reset_spawners")
 	with (trigEnemySpawn) { alarm[0] = 60; image_speed = 1; } //Spawning
 }
 
-trigBreaker.active = step > 6;
-
 switch step
 {
 	case 0:
@@ -54,11 +52,10 @@ switch step
 	break;
 	
 	case 7:
-	if round_won() { step++; }
 	draw_text_ext(GAME_WIDTH/2, GAME_HEIGHT - 35, "At any time, you can break the breaker and leave the room. You must reach a threshold to unlock the next level however.", 10, GAME_WIDTH - 20);
 	break;
 }
 
 draw_reset();
 
-if step == 8 || objBarHealth.hp <= 0 || objBarBuilding.hp <= 0 { instance_destroy(); }
+if round_won() || objBarHealth.hp <= 0 || objBarBuilding.hp <= 0 { instance_destroy(); }

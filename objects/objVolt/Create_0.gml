@@ -1,2 +1,2 @@
 zapping = false;
-alarm[1] = 600;
+alarm[1] = 120;

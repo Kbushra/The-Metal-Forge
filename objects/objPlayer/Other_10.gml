@@ -65,7 +65,8 @@ update_direction = function()
 		firstDirection = initial_dir(hsp, vsp);
 		
 		if firstDirection != "" { moving = true; }
-		else if state == playerStates.normal { firstDirection = stillDirection; }
+		else if array_length(gameControl.inputQueue) > 0 && state == playerStates.normal
+		{ firstDirection = key_to_dir(array_last(gameControl.inputQueue)); }
 	}
 	
 	//stopping movement
@@ -75,8 +76,6 @@ update_direction = function()
 	if firstDirection != "" { faceDirection = firstDirection; }
 	
 	if !moving { exit; }
-	
-	if is_movement_key(keyboard_key) { stillDirection = key_to_dir(keyboard_key); }
 	
 	firstDirection = get_dir(hsp, vsp, axis);
 	axis = get_axis(firstDirection, axis); //Update axis when direction axis changes
@@ -118,7 +117,7 @@ spawn_in = function()
 	send_signal(gameCamera, "snap", true);
 	x = trigSpawn.x;
 	y = trigSpawn.y;
-	stillDirection = trigSpawn.dir;
+	faceDirection = trigSpawn.dir;
 	state = playerStates.normal;
 	
 	stop_signal("spawn");
