@@ -41,10 +41,10 @@ function move_angle(_angle, _spd)
 	y -= dsin(_angle) * _spd;
 }
 
-function in_bounds_strict(_x, _y)
+function in_bounds_margin(_x, _y, _x_margin = sprite_width - sprite_xoffset, _y_margin = sprite_height - sprite_yoffset)
 {
-	return _x > sprite_xoffset - sprite_width && _x < room_width + sprite_width - sprite_xoffset &&
-		_y > sprite_yoffset - sprite_height && _y < room_height + sprite_height - sprite_yoffset;
+	return _x > -_x_margin && _x < room_width + _x_margin &&
+		_y > -_y_margin && _y < room_height + _y_margin;
 }
 
 function in_bounds_fully(_x, _y)

@@ -4,7 +4,7 @@ if state == pathfinderStates.puppet { exit; }
 
 state = distance_to_object(objPlayer) > range ? pathfinderStates.pathfind : pathfinderStates.wander;
 
-if !in_bounds_strict(objPlayer.x, objPlayer.y) { state = pathfinderStates.wander; }
+if !in_bounds_margin(objPlayer.x, objPlayer.y) { state = pathfinderStates.wander; }
 
 if state == pathfinderStates.wander
 {

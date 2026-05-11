@@ -5,58 +5,90 @@ y = origin.y;
 depth = origin.depth + 1;
 
 var has_damaged = false;
-for (var i = -sprite_height/2; i < sprite_height/2; i++)
+for (var i = ceil(-sprite_height/2); i < floor(sprite_height/2); i++)
 {
-	var leftColl = collision_line(x, y+i, 0, y+i, trigSolid, false, true);
-	var rightColl = collision_line(x, y+i, room_width, y+i, trigSolid, false, true);
-	var upColl = collision_line(x+i, y, x+i, 0, trigSolid, false, true);
-	var downColl = collision_line(x+i, y, x+i, room_height, trigSolid, false, true);
+	var ind = i+floor(sprite_height/2);
+	var list = ds_list_create();
 	
 	switch image_angle
 	{
 		case 0:
-			if instance_exists(rightColl) { lineWidths[i+sprite_height/2] = rightColl.bbox_left - x; }
-			else { lineWidths[i+sprite_height/2] = room_width - x; }
+			var count = collision_line_list(x, y+i, room_width, y+i, trigSolid, false, true, list, true);
+			
+			if position_meeting(x, y+i, trigSolid) { lineWidths[ind] = 0; }
+			else if count == 0 { lineWidths[ind] = room_width - x; }
+			else
+			{
+				var coll = list[| 0];
+				lineWidths[ind] = coll.bbox_left > x ?
+					coll.bbox_left - x : 0;
+			}
+			
 		break;
 		
 		case 90:
-			if instance_exists(upColl) { lineWidths[i+sprite_height/2] = y - upColl.bbox_bottom; }
-			else { lineWidths[i+sprite_height/2] = y; }
+			var count = collision_line_list(x+i, y, x+i, 0, trigSolid, false, true, list, true);
+			
+			if position_meeting(x+i, y, trigSolid) { lineWidths[ind] = 0; }
+			else if count == 0 { lineWidths[ind] = y; }
+			else
+			{
+				var coll = list[| 0];
+				lineWidths[ind] = coll.bbox_bottom < y ?
+					y - coll.bbox_bottom : 0;
+			}
 		break;
 		
 		case 180:
-			if instance_exists(leftColl) { lineWidths[i+sprite_height/2] = x - leftColl.bbox_right; }
-			else { lineWidths[i+sprite_height/2] = x; }
+			var count = collision_line_list(x, y+i, 0, y+i, trigSolid, false, true, list, true);
+			
+			if position_meeting(x, y+i, trigSolid) { lineWidths[ind] = 0; }
+			else if count == 0 { lineWidths[ind] = x; }
+			else
+			{
+				var coll = list[| 0];
+				lineWidths[ind] = coll.bbox_right < x ?
+					x - coll.bbox_right : 0;
+			}
+			
 		break;
 		
 		case 270:
-			if instance_exists(downColl) { lineWidths[i+sprite_height/2] = downColl.bbox_top - y; }
-			else { lineWidths[i+sprite_height/2] = room_height - y; }
+			var count = collision_line_list(x+i, y, x+i, room_height, trigSolid, false, true, list, true);
+			
+			if position_meeting(x+i, y, trigSolid) { lineWidths[ind] = 0; }
+			else if count == 0 { lineWidths[ind] = room_height - y; }
+			else
+			{
+				var coll = list[| 0];
+				lineWidths[ind] = coll.bbox_top > y ?
+					coll.bbox_top - y : 0;
+			}
 		break;
 	}
 	
+	ds_list_destroy(list);
 	if has_damaged { continue; }
-	
-	var leftPlayerColl = collision_line(x, y+i, x - lineWidths[i+sprite_height/2], y+i, objPlayer, false, true);
-	var rightPlayerColl = collision_line(x, y+i, x + lineWidths[i+sprite_height/2], y+i, objPlayer, false, true);
-	var upPlayerColl = collision_line(x+i, y, x+i, y - lineWidths[i+sprite_height/2], objPlayer, false, true);
-	var downPlayerColl = collision_line(x+i, y, x+i, y + lineWidths[i+sprite_height/2], objPlayer, false, true);
 	
 	switch image_angle
 	{
 		case 0:
+			var rightPlayerColl = collision_line(x, y+i, x + lineWidths[ind], y+i, objPlayer, false, true);
 			if instance_exists(rightPlayerColl) { deal_damage(); has_damaged = true; }
 		break;
 		
 		case 90:
+			var upPlayerColl = collision_line(x+i, y, x+i, y - lineWidths[ind], objPlayer, false, true);
 			if instance_exists(upPlayerColl) { deal_damage(); has_damaged = true; }
 		break;
 		
 		case 180:
+			var leftPlayerColl = collision_line(x, y+i, x - lineWidths[ind], y+i, objPlayer, false, true);
 			if instance_exists(leftPlayerColl) { deal_damage(); has_damaged = true; }
 		break;
 		
 		case 270:
+			var downPlayerColl = collision_line(x+i, y, x+i, y + lineWidths[ind], objPlayer, false, true);
 			if instance_exists(downPlayerColl) { deal_damage(); has_damaged = true; }
 		break;
 	}
@@ -69,7 +101,7 @@ if !beamed
 	
 	if time >= 1
 	{
-		play_sfx(sfxGlint);
+		play_sfx(sfxGlint, 1, 0.5);
 		beamed = true;
 		time = 0;
 		send_signal(origin, "beamed", true);

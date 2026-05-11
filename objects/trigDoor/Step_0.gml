@@ -4,7 +4,7 @@ if !escape || !animate { exit; }
 with (objPlayer)
 {
 	send_signal(id, "puppet", true);
-	moving = in_bounds_strict(x, y);
+	moving = in_bounds_margin(x, y, 100, 100);
 	
 	if !moving { exit; }
 	

@@ -9,7 +9,7 @@ if alarm[1] < 0
 }
 
 if round_won() { instance_destroy(); exit; }
-if !in_bounds_strict(x, y) && alarm[0] < 0 { alarm[0] = 60; }
+if !in_bounds_margin(x, y) && alarm[0] < 0 { alarm[0] = 60; }
 
 if zapping
 {

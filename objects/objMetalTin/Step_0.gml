@@ -4,7 +4,7 @@ if state == pathfinderStates.puppet { exit; }
 
 image_blend = state == pathfinderStates.pathfind ? c_red : c_white;
 
-if !in_bounds_strict(objPlayer.x, objPlayer.y) { state = pathfinderStates.wander; }
+if !in_bounds_margin(objPlayer.x, objPlayer.y) { state = pathfinderStates.wander; }
 
 if state == pathfinderStates.wander
 {
