@@ -38,7 +38,7 @@ global.level[2] =
 	ranks: [5500, 7000, 8000, 15000, 25000],
 	comments:
 	[
-		"I let the pressure get in my skin.",
+		"I let the acid get in my skin.",
 		"I can't leave all of that profit behind!",
 		"I'd never be trusted with this equipment...",
 		"Not a single person? Luckily, I can reap the benefits.",
@@ -50,7 +50,7 @@ global.level[2] =
 global.level[3] = 
 {
 	name: "Radio Station",
-	ranks: [6500, 8000, 11000, 21000, 40000],
+	ranks: [6500, 8000, 11000, 21000, 35000],
 	comments:
 	[
 		"Signalled for a loss?",

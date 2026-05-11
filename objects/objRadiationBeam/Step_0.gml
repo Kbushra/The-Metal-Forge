@@ -15,7 +15,7 @@ for (var i = ceil(-sprite_height/2); i < floor(sprite_height/2); i++)
 		case 0:
 			var count = collision_line_list(x, y+i, room_width, y+i, trigSolid, false, true, list, true);
 			
-			if position_meeting(x, y+i, trigSolid) { lineWidths[ind] = 0; }
+			if position_meeting(x+2, y+i, trigSolid) { lineWidths[ind] = 0; }
 			else if count == 0 { lineWidths[ind] = room_width - x; }
 			else
 			{
@@ -29,7 +29,7 @@ for (var i = ceil(-sprite_height/2); i < floor(sprite_height/2); i++)
 		case 90:
 			var count = collision_line_list(x+i, y, x+i, 0, trigSolid, false, true, list, true);
 			
-			if position_meeting(x+i, y, trigSolid) { lineWidths[ind] = 0; }
+			if position_meeting(x+i, y-2, trigSolid) { lineWidths[ind] = 0; }
 			else if count == 0 { lineWidths[ind] = y; }
 			else
 			{
@@ -42,7 +42,7 @@ for (var i = ceil(-sprite_height/2); i < floor(sprite_height/2); i++)
 		case 180:
 			var count = collision_line_list(x, y+i, 0, y+i, trigSolid, false, true, list, true);
 			
-			if position_meeting(x, y+i, trigSolid) { lineWidths[ind] = 0; }
+			if position_meeting(x-2, y+i, trigSolid) { lineWidths[ind] = 0; }
 			else if count == 0 { lineWidths[ind] = x; }
 			else
 			{
@@ -56,7 +56,7 @@ for (var i = ceil(-sprite_height/2); i < floor(sprite_height/2); i++)
 		case 270:
 			var count = collision_line_list(x+i, y, x+i, room_height, trigSolid, false, true, list, true);
 			
-			if position_meeting(x+i, y, trigSolid) { lineWidths[ind] = 0; }
+			if position_meeting(x+i, y+2, trigSolid) { lineWidths[ind] = 0; }
 			else if count == 0 { lineWidths[ind] = room_height - y; }
 			else
 			{

@@ -1,8 +1,5 @@
 event_inherited();
 
-x += random_range(-5, 5);
-y += random_range(-5, 5);
-
 attackIn = false;
 attackOut = false;
 attackDelay = 60;
@@ -14,5 +11,7 @@ morphFail = true; //So first attack it tries morphing
 morphTimer = 60;
 tp = false;
 
-targX = x;
-targY = y;
+x += random_range(-5, 5);
+y += random_range(-5, 5);
+targX = x + choose(-32, 32);
+targY = y + choose(-32, 32);

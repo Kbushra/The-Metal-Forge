@@ -7,3 +7,5 @@ global.bgmBus = audio_bus_create();
 audio_emitter_bus(global.bgmEmitter, global.bgmBus);
 
 global.bgm = noone;
+
+startedRoom = true;

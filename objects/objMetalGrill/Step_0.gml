@@ -1,8 +1,19 @@
 depth = -bbox_bottom;
 if state == pathfinderStates.puppet { exit; }
 
-x = lerp(x, targX, 0.1);
-y = lerp(y, targY, 0.1);
+var lerpedX = lerp(x, targX, 0.1);
+var lerpedY = lerp(y, targY, 0.1);
+
+if !place_free(targX, targY) && !place_free(lerpedX, lerpedY)
+{
+	targX = x;
+	targY = y;
+	lerpedX = x;
+	lerpedY = y;
+}
+
+x = lerpedX;
+y = lerpedY;
 
 if attackIn
 {

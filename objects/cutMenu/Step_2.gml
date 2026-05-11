@@ -17,7 +17,7 @@ if step == 0
 	
 	if objPlayer.x >= 100 && !instance_exists(objVolt)
 	{
-		instance_create_depth(-32, 208, 0, objVolt, { origin: id, ignorePuppeting: true });
+		instance_create_depth(-32, 208, 0, objVolt, { origin: id, damagePuppets: true });
 		play_sfx(sfxVoltCreate);
 	}
 	
