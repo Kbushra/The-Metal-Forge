@@ -12,6 +12,7 @@ axis = VERTICAL;
 knockbackX = 0;
 knockbackY = 0;
 knockbackTime = 1;
+invincibilityTime = 0;
 
 state = playerStates.normal;
 

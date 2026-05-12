@@ -84,7 +84,7 @@ update_direction = function()
 ///@func knock(xChange, yChange, intensity, [dmg])
 knock = function(xChange, yChange, intensity, dmg = 0)
 {
-	if state != playerStates.normal { return false; }
+	if state != playerStates.normal || invincibilityTime > 0 { return false; }
 	
 	objBarHealth.deal_damage(dmg);
 	play_sfx(sfxDamage);

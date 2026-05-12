@@ -2,7 +2,12 @@ depth = -bbox_bottom;
 
 if got_signal("puppet") { state = playerStates.puppet;	}
 else if knockbackTime < 1 { state = playerStates.knockback; }
-else if state != playerStates.normal { state = playerStates.normal; image_index = 0; }
+else if state != playerStates.normal
+{
+	if state == playerStates.knockback { invincibilityTime = 15; }
+	state = playerStates.normal;
+	image_index = 0;
+}
 
 stop_signal("puppet");
 stop_signal("knockback");
@@ -43,6 +48,8 @@ if state == playerStates.knockback
 }
 
 if state != playerStates.normal { exit; }
+
+invincibilityTime--;
 
 image_blend = c_white;
 image_angle = 0;

@@ -15,3 +15,8 @@ x += random_range(-5, 5);
 y += random_range(-5, 5);
 targX = x + choose(-32, 32);
 targY = y + choose(-32, 32);
+targXSpd = random_range(-4, 4);
+targYSpd = random_range(-5, -2);
+
+arrowDir = 0;
+arrowLen = 0;

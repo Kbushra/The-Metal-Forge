@@ -9,11 +9,8 @@ var padding = 10;
 var clamp_x = clamp(x, cam_x + padding, cam_x + cam_w - padding);
 var clamp_y = clamp(y, cam_y + padding, cam_y + cam_h - padding);
 
-var spd = sqrt(sqr(xSpd) + sqr(ySpd));
-var scale = clamp(power(1.14, spd)/2, 0.2, 1);
-
 if x != clamp_x || y != clamp_y
 {
-	draw_sprite_ext(sprVoltWarning, 0, clamp_x - cam_x, clamp_y - cam_y,
-		scale, scale, 0, c_white, image_alpha);
+	draw_sprite_ext(sprConveyorWarning, abs(spd) div 2.5, clamp_x - cam_x, clamp_y - cam_y,
+		image_xscale, 1, image_angle, c_white, image_alpha);
 }
