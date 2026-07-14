@@ -2,10 +2,15 @@ depth = -bbox_bottom;
 
 if state == pathfinderStates.puppet { exit; }
 
-state = distance_to_object(objPlayer) > range ? pathfinderStates.pathfind : pathfinderStates.wander;
+if (!(state == pathfinderStates.pathfind && place_meeting(x, y, objMetalAntenna) &&
+distance_to_object(objPlayer) > 32))
+{
+	state = distance_to_object(objPlayer) > range ? pathfinderStates.pathfind : pathfinderStates.wander;
+}
 
 if !in_bounds_margin(objPlayer.x, objPlayer.y) { state = pathfinderStates.wander; }
 
+//Stands still
 if state == pathfinderStates.wander
 {
 	image_speed = 0;

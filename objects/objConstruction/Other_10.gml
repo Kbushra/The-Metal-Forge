@@ -69,6 +69,6 @@ global.buildings[buildingNames.reactor] =
 	placer: objPlacerReactor,
 	resourceTypes: [resourceNames.metal, resourceNames.alpha, resourceNames.quantum],
 	resourceQuantities: [5, 6, 2],
-	desc: "Increases rate of enemy spawner, spawned enemies have 2x hp.",
+	desc: "Increases spawn rate and spontaneously changes enemy hp.",
 	count: 1
 };

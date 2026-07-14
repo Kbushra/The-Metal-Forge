@@ -18,7 +18,12 @@ spawn_enemy = function()
 		if chance <= counter
 		{
 			var inst = instance_create_depth(x, y, depth, global.enemy[enemyTypes[i]].obj);
-			inst.maxHp *= hasReactor ? 2 : 1;
+			if hasReactor
+			{
+				inst.maxHp *= random(2);
+				inst.maxHp = clamp(inst.maxHp, 1, 999);
+			}
+			
 			inst.hp = inst.maxHp;
 			exit;
 		}
